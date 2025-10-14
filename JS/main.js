@@ -116,8 +116,21 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Simulate form submission (in a real application, this would be sent to a server)
-        showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
+        // Form submission - sends to Hello@jerseyjems.com
+        // TODO: Integrate with email service (e.g., EmailJS, Formspree, or backend API)
+        // For now, construct mailto link as fallback
+        const subject = encodeURIComponent('Jersey Jems Pre-Order Inquiry');
+        const body = encodeURIComponent(
+            `Name: ${name}\n` +
+            `Email: ${email}\n` +
+            `Phone: ${phone || 'Not provided'}\n\n` +
+            `Message: ${message}`
+        );
+        
+        // Open mailto link (this will open the user's email client)
+        window.location.href = `mailto:Hello@jerseyjems.com?subject=${subject}&body=${body}`;
+        
+        showNotification('Opening your email client to send the message...', 'success');
         contactForm.reset();
     });
 

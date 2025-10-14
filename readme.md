@@ -108,6 +108,6 @@ Removed detailed descriptions and feature lists. Now shows:
 
 ---
 
-**Contact**: info@jerseyjems.com | [Facebook](https://www.facebook.com/share/14H35yfvq22/?mibextid=wwXIfr)
+**Contact**: Hello@jerseyjems.com | [Facebook](https://www.facebook.com/share/14H35yfvq22/?mibextid=wwXIfr)
 
 *Last Updated: Conversion-focused redesign completed - ready for startup launch*
