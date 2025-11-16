@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Jersey Jems</title>
+    <title>Italian Specialty Menu - Jersey Jems</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
+        :root {
+            /* Jersey Jems Brand Colors */
+            --primary-color: #C0392B; /* Deep red */
+            --secondary-color: #E67E22; /* Warm orange */
+            --accent-color: #F39C12; /* Rich golden yellow */
+            --background-cream: #FDF6E3; /* Warm cream */
+            --text-dark: #2C1810; /* Deep chocolate brown */
+            --text-light: #8B4513; /* Warm brown */
+            --white: #ffffff;
+            --light-bg: #FDF9F0; /* Slightly warm off-white */
+            --cream: #F5F2E8;
+            
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* Shadows */
+            --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,110 +36,25 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: var(--font-body);
             line-height: 1.6;
-            color: #333;
-            background-color: #fafafa;
+            color: var(--text-dark);
+            background: var(--light-bg);
         }
 
-        /* Navigation Styles */
+        .menu-header {
+            font-family: var(--font-heading);
+        }
+
+        /* Header Navigation matching main site */
         .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
             position: fixed;
             top: 0;
             width: 100%;
+            background: var(--white);
+            box-shadow: var(--shadow-light);
             z-index: 1000;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 20px;
-        }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            color: #C0392B;
-        }
-
-        .nav-brand .logo {
-            height: 40px;
-            width: 40px;
-            margin-right: 10px;
-            border-radius: 50%;
-        }
-
-        .nav-brand h1 {
-            margin: 0;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            gap: 2rem;
-        }
-
-        .nav-link {
-            color: #2C1810;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            padding: 0.5rem 0;
-        }
-
-        .nav-link:hover {
-            color: #C0392B;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .bar {
-            width: 25px;
-            height: 3px;
-            background-color: #2C1810;
-            margin: 3px 0;
-            transition: 0.3s;
-        }
-
-        @media (max-width: 768px) {
-            .nav-menu {
-                position: fixed;
-                left: -100%;
-                top: 70px;
-                flex-direction: column;
-                background-color: rgba(255, 255, 255, 0.98);
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-                padding: 2rem 0;
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-        }
-
-        /* Adjust main content for fixed navbar */
-        body {
-            padding-top: 80px;
+            transition: var(--transition);
         }
 
         .container {
@@ -123,152 +62,385 @@
             margin: 0 auto;
             padding: 0 20px;
         }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
 
-        header {
-            background: linear-gradient(135deg, #C0392B 0%, #E67E22 100%);
-            color: white;
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-brand .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .nav-brand h1 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        
+        .hamburger .bar {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            transition: var(--transition);
+        }
+        
+        .hamburger.active .bar:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .bar:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-link.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
             text-align: center;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            box-shadow: var(--shadow-light);
         }
 
-        .tagline {
-            font-size: 1.2rem;
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 120px 20px 60px;
+            background: linear-gradient(135deg, var(--background-cream) 0%, var(--cream) 100%);
+            margin-top: 80px;
+        }
+
+        .header h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-light);
             font-style: italic;
-            opacity: 0.9;
+            margin-bottom: 20px;
         }
 
+        .header .contact-info {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+        }
+
+        /* Menu Container */
+        .menu-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section Styling */
         .menu-section {
-            background: white;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 60px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-light);
             overflow: hidden;
         }
 
         .section-header {
-            background: linear-gradient(135deg, #C0392B 0%, #E67E22 100%);
-            color: white;
-            padding: 1.5rem;
+            padding: 40px;
+            color: var(--white);
             text-align: center;
         }
 
-        .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
         }
 
-        .section-description {
-            font-style: italic;
+        .section-header p {
+            font-size: 1.2rem;
             opacity: 0.9;
         }
 
-        .menu-grid {
+        /* Different section colors using your brand palette */
+        .ravioli-header {
+            background: linear-gradient(135deg, var(--primary-color), #8B0000);
+        }
+
+        .specialty-header {
+            background: linear-gradient(135deg, var(--secondary-color), #CD853F);
+        }
+
+        .pasta-header {
+            background: linear-gradient(135deg, var(--accent-color), #DAA520);
+        }
+
+        .gnocchi-header {
+            background: linear-gradient(135deg, #8B4513, var(--text-dark));
+        }
+
+        .bake-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .sauce-header {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+        }
+
+        /* Menu Items */
+        .menu-items {
+            padding: 40px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            padding: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
         }
 
         .menu-item {
-            padding: 1rem;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 25px 0;
+            border-bottom: 1px solid var(--cream);
+            transition: var(--transition);
         }
 
         .menu-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateX(10px);
+            padding-left: 10px;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-info {
+            flex: 1;
         }
 
         .item-name {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #2C1810;
-            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-family: var(--font-heading);
         }
 
         .item-description {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            color: var(--text-light);
+            margin-bottom: 5px;
+            font-size: 0.95rem;
         }
 
         .item-size {
-            color: #888;
-            font-size: 0.8rem;
-            margin-bottom: 0.5rem;
+            color: #999;
+            font-size: 0.85rem;
+            font-style: italic;
         }
 
-        .item-price {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #C0392B;
-            text-align: right;
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-left: 20px;
+            font-family: var(--font-heading);
         }
 
+        /* Order Information */
         .order-info {
-            background: linear-gradient(135deg, #C0392B 0%, #E67E22 100%);
-            color: white;
-            padding: 2rem;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-light);
+            padding: 50px;
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 40px;
         }
 
         .order-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
         }
 
-        .order-methods {
+        .order-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
-        .order-method {
-            background: rgba(255,255,255,0.1);
-            padding: 1rem;
-            border-radius: 8px;
-        }
-
-        .order-method h4 {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-info {
-            background: #333;
-            color: white;
+        .order-box {
             text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
         }
 
+        .order-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+        }
+
+        .phone-icon { background: linear-gradient(135deg, var(--secondary-color), var(--accent-color)); color: var(--white); }
+        .fresh-icon { background: linear-gradient(135deg, #228B22, #32CD32); color: var(--white); }
+        .custom-icon { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: var(--white); }
+
+        .order-box h4 {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .order-box p {
+            color: var(--text-light);
+        }
+
+        .disclaimer {
+            border-top: 1px solid var(--cream);
+            padding-top: 30px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Navigation */
         @media (max-width: 768px) {
-            .menu-grid {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background-color: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: var(--shadow-light);
+                z-index: 999;
+                padding: 20px 0;
+                gap: 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                margin: 10px 0;
+            }
+
+            .menu-items {
                 grid-template-columns: 1fr;
+                padding: 30px 20px;
             }
-            
-            h1 {
+
+            .menu-item {
+                flex-direction: column;
+                gap: 15px;
+                text-align: left;
+            }
+
+            .price {
+                margin-left: 0;
+                align-self: flex-start;
+            }
+
+            .section-header {
+                padding: 30px 20px;
+            }
+
+            .section-header h2 {
                 font-size: 2rem;
+                flex-direction: column;
+                gap: 10px;
             }
-            
-            .section-title {
-                font-size: 1.5rem;
-            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .navbar, .btn { display: none !important; }
+            body { background: white !important; }
+            .menu-section { page-break-inside: avoid; }
+            * { color-adjust: exact; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation matching main site -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-brand">
@@ -276,11 +448,11 @@
                 <h1>Jersey Jems</h1>
             </div>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="/#about" class="nav-link">About</a></li>
-                <li><a href="/#menu-highlights" class="nav-link">Featured Items</a></li>
-                <li><a href="#" class="nav-link" style="color: #d4691a;">Menu</a></li>
-                <li><a href="/#contact" class="nav-link">Contact</a></li>
+                <li><a href="../#home" class="nav-link">Home</a></li>
+                <li><a href="../#about" class="nav-link">About</a></li>
+                <li><a href="../#menu-highlights" class="nav-link">Featured Items</a></li>
+                <li><a href="../menu/" class="nav-link active">Menu</a></li>
+                <li><a href="../#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
@@ -290,333 +462,239 @@
         </div>
     </nav>
 
-    <header>
-        <div class="container">
-            <h1>Jersey Jems Menu</h1>
-            <p class="tagline">Fresh Pasta & Italian Specialties</p>
-        </div>
-    </header>
+    <!-- Header -->
+    <div class="header">
+        <h1>Italian Specialty Menu</h1>
+        <p class="subtitle">Authentic Italian specialties from traditional family recipes</p>
+        <p class="contact-info">Call ahead for availability and pickup times</p>
+        <button onclick="window.print()" class="btn btn-primary">
+            <i class="fas fa-print"></i> Print Menu
+        </button>
+    </div>
 
-    <div class="container">
+    <!-- Menu Container -->
+    <div class="menu-container">
+        <!-- Fresh Ravioli -->
         <div class="menu-section">
-            <div class="section-header">
-                <h2 class="section-title">Fresh Ravioli</h2>
-                <p class="section-description">Handmade daily with premium fillings</p>
+            <div class="section-header ravioli-header">
+                <h2><i class="fas fa-cheese"></i> Fresh Ravioli</h2>
+                <p>Handmade daily with premium fillings</p>
             </div>
-            <div class="menu-grid">
+            <div class="menu-items">
                 <div class="menu-item">
-                    <div class="item-name">Half Moon Ravioli</div>
-                    <div class="item-description">Fresh pasta filled with ricotta and herbs</div>
-                    <div class="item-size">13oz package</div>
-                    <div class="item-price">$7.85</div>
+                    <div class="item-info">
+                        <div class="item-name">Large Cheese Ravioli</div>
+                        <div class="item-description">Large fresh pasta filled with premium cheese blend</div>
+                        <div class="item-size">Per package</div>
+                    </div>
+                    <div class="price">$10.99</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">2 Dozen Half Moons</div>
-                    <div class="item-description">Family size portion</div>
-                    <div class="item-size">26oz package</div>
-                    <div class="item-price">$15.50</div>
+                    <div class="item-info">
+                        <div class="item-name">Jumbo Ravioli</div>
+                        <div class="item-description">Extra large ravioli with generous cheese filling</div>
+                        <div class="item-size">Per package</div>
+                    </div>
+                    <div class="price">$8.99</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Blanched Half Moons</div>
-                    <div class="item-description">Pre-cooked for quick preparation</div>
-                    <div class="item-size">36ea per bag</div>
-                    <div class="item-price">$18.75</div>
+                    <div class="item-info">
+                        <div class="item-name">Round Lobster Ravioli</div>
+                        <div class="item-description">Premium lobster filling in round fresh pasta</div>
+                        <div class="item-size">Per package</div>
+                    </div>
+                    <div class="price">$22.99</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Sweet Ravioli Half Moon</div>
-                    <div class="item-description">Dessert ravioli with sweet filling</div>
-                    <div class="item-size">13oz package</div>
-                    <div class="item-price">$7.70</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Jumbo Ravioli</div>
-                    <div class="item-description">Large size with generous filling</div>
-                    <div class="item-size">16oz package</div>
-                    <div class="item-price">$8.25</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Blanched Jumbo (2lb Bags)</div>
-                    <div class="item-description">Bulk size, pre-cooked</div>
-                    <div class="item-size">24ea per bag</div>
-                    <div class="item-price">$17.65</div>
+                    <div class="item-info">
+                        <div class="item-name">Round Ricotta & Broccoli Rabe</div>
+                        <div class="item-description">Ricotta cheese with traditional broccoli rabe in round ravioli</div>
+                        <div class="item-size">Per package</div>
+                    </div>
+                    <div class="price">$13.99</div>
                 </div>
             </div>
         </div>
 
+        <!-- Fresh Pasta -->
         <div class="menu-section">
-            <div class="section-header">
-                <h2 class="section-title">Specialty Ravioli</h2>
-                <p class="section-description">Gourmet flavors and unique combinations</p>
+            <div class="section-header pasta-header">
+                <h2><i class="fas fa-wheat-awn"></i> Fresh Pasta</h2>
+                <p>Made fresh daily with semolina flour</p>
             </div>
-            <div class="menu-grid">
+            <div class="menu-items">
                 <div class="menu-item">
-                    <div class="item-name">Spinach & Cheese Jumbo</div>
-                    <div class="item-description">Fresh spinach and three cheese blend</div>
-                    <div class="item-size">16oz package</div>
-                    <div class="item-price">$8.55</div>
+                    <div class="item-info">
+                        <div class="item-name">Linguine</div>
+                        <div class="item-description">Flat, narrow pasta ideal for seafood</div>
+                        <div class="item-size">16oz package</div>
+                    </div>
+                    <div class="price">$5.20</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Spinach Blanched Jumbos</div>
-                    <div class="item-description">Pre-cooked specialty ravioli</div>
-                    <div class="item-size">36ea per bag</div>
-                    <div class="item-price">$28.05</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">5 Cheese Ravioli</div>
-                    <div class="item-description">Premium blend of five Italian cheeses</div>
-                    <div class="item-size">18ct package</div>
-                    <div class="item-price">$8.25</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">5 Cheese Ravioli (Large)</div>
-                    <div class="item-description">Jumbo size with five cheese filling</div>
-                    <div class="item-size">6ct package</div>
-                    <div class="item-price">$14.75</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Lobster Ravioli</div>
-                    <div class="item-description">Premium lobster filling in fresh pasta</div>
-                    <div class="item-size">16oz package</div>
-                    <div class="item-price">$19.99</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Ricotta & Broccoli Rabe Ravioli</div>
-                    <div class="item-description">Ricotta cheese with traditional broccoli rabe</div>
-                    <div class="item-size">12oz package</div>
-                    <div class="item-price">$12.95</div>
+                    <div class="item-info">
+                        <div class="item-name">Cheese Cavatelli</div>
+                        <div class="item-description">Traditional shell-shaped pasta with cheese</div>
+                        <div class="item-size">Per package</div>
+                    </div>
+                    <div class="price">$6.99</div>
                 </div>
             </div>
         </div>
 
+        <!-- Gnocchi & Specialty -->
         <div class="menu-section">
-            <div class="section-header">
-                <h2 class="section-title">Fresh Pasta</h2>
-                <p class="section-description">Made fresh daily with semolina flour</p>
+            <div class="section-header gnocchi-header">
+                <h2><i class="fas fa-crown"></i> Gnocchi & Specialty Pasta</h2>
+                <p>Traditional Italian favorites</p>
             </div>
-            <div class="menu-grid">
+            <div class="menu-items">
                 <div class="menu-item">
-                    <div class="item-name">Spaghetti</div>
-                    <div class="item-description">Classic long pasta, perfect texture</div>
-                    <div class="item-size">16oz package</div>
-                    <div class="item-price">$4.30</div>
+                    <div class="item-info">
+                        <div class="item-name">Potato Gnocchi</div>
+                        <div class="item-description">Traditional potato dumplings</div>
+                        <div class="item-size">16oz package</div>
+                    </div>
+                    <div class="price">$6.99</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Angel Hair Spaghetti</div>
-                    <div class="item-description">Delicate, thin pasta</div>
-                    <div class="item-size">16oz package</div>
-                    <div class="item-price">$4.30</div>
+                    <div class="item-info">
+                        <div class="item-name">Gnocchi Ricotta</div>
+                        <div class="item-description">Gnocchi enriched with premium ricotta cheese</div>
+                        <div class="item-size">Per package</div>
+                    </div>
+                    <div class="price">$9.99</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Linguine</div>
-                    <div class="item-description">Flat, narrow pasta ideal for seafood</div>
-                    <div class="item-size">16oz package</div>
-                    <div class="item-price">$4.30</div>
+                    <div class="item-info">
+                        <div class="item-name">Manicotti</div>
+                        <div class="item-description">Large pasta tubes for stuffing</div>
+                        <div class="item-size">Per package</div>
+                    </div>
+                    <div class="price">$9.99</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Fettuccini</div>
-                    <div class="item-description">Wide, flat ribbon pasta</div>
-                    <div class="item-size">16oz package</div>
-                    <div class="item-price">$4.30</div>
+                    <div class="item-info">
+                        <div class="item-name">Stuffed Shells</div>
+                        <div class="item-description">Large shells filled with cheese blend</div>
+                        <div class="item-size">Per package</div>
+                    </div>
+                    <div class="price">$9.99</div>
                 </div>
             </div>
         </div>
 
+        <!-- Sauces -->
         <div class="menu-section">
-            <div class="section-header">
-                <h2 class="section-title">Gnocchi & Specialty Pasta</h2>
-                <p class="section-description">Traditional Italian favorites</p>
+            <div class="section-header sauce-header">
+                <h2><i class="fas fa-jar"></i> Sauces</h2>
+                <p>Homemade sauces from traditional recipes</p>
             </div>
-            <div class="menu-grid">
+            <div class="menu-items">
                 <div class="menu-item">
-                    <div class="item-name">Potato Gnocchi</div>
-                    <div class="item-description">Traditional potato dumplings</div>
-                    <div class="item-size">16oz package</div>
-                    <div class="item-price">$5.40</div>
+                    <div class="item-info">
+                        <div class="item-name">Pints of Sauce</div>
+                        <div class="item-description">Traditional homemade sauce</div>
+                        <div class="item-size">16oz container</div>
+                    </div>
+                    <div class="price">$6.49</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Cheese Gnocchi</div>
-                    <div class="item-description">Enriched with premium cheese</div>
-                    <div class="item-size">16oz package</div>
-                    <div class="item-price">$5.90</div>
+                    <div class="item-info">
+                        <div class="item-name">Quarts of Sauce</div>
+                        <div class="item-description">Traditional homemade sauce - family size</div>
+                        <div class="item-size">32oz container</div>
+                    </div>
+                    <div class="price">$9.99</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Manicotti</div>
-                    <div class="item-description">Large pasta tubes for stuffing</div>
-                    <div class="item-size">16oz package</div>
-                    <div class="item-price">$9.90</div>
+                    <div class="item-info">
+                        <div class="item-name">Tomato Sauce</div>
+                        <div class="item-description">Traditional homemade tomato sauce</div>
+                        <div class="item-size">32oz container</div>
+                    </div>
+                    <div class="price">$6.99</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Cheese Tortellini</div>
-                    <div class="item-description">Ring-shaped pasta with cheese filling</div>
-                    <div class="item-size">16oz package</div>
-                    <div class="item-price">$7.20</div>
+                    <div class="item-info">
+                        <div class="item-name">Rose Sauce</div>
+                        <div class="item-description">Creamy tomato and cream sauce blend</div>
+                        <div class="item-size">32oz container</div>
+                    </div>
+                    <div class="price">$8.49</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Cheese Tortellini (Family Size)</div>
-                    <div class="item-description">Large format for big appetites</div>
-                    <div class="item-size">6ct bulk package</div>
-                    <div class="item-price">$16.00</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <div class="section-header">
-                <h2 class="section-title">Ready-to-Bake Favorites</h2>
-                <p class="section-description">Family dinners made easy</p>
-            </div>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="item-name">Stuffed Shells</div>
-                    <div class="item-description">Large shells filled with cheese blend</div>
-                    <div class="item-size">18oz package</div>
-                    <div class="item-price">$6.10</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">2lb Lasagna</div>
-                    <div class="item-description">Family size, ready to bake</div>
-                    <div class="item-size">32oz family size</div>
-                    <div class="item-price">$13.90</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">4lb Lasagna</div>
-                    <div class="item-description">Party size for large gatherings</div>
-                    <div class="item-size">64oz party size</div>
-                    <div class="item-price">$25.60</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Fresh Lasagna Skins</div>
-                    <div class="item-description">Make your own lasagna</div>
-                    <div class="item-size">16oz package</div>
-                    <div class="item-price">$9.50</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Pepperoni Bread</div>
-                    <div class="item-description">Fresh baked bread with pepperoni</div>
-                    <div class="item-size">1 loaf</div>
-                    <div class="item-price">$6.60</div>
+                    <div class="item-info">
+                        <div class="item-name">Vodka Sauce</div>
+                        <div class="item-description">Traditional vodka cream sauce</div>
+                        <div class="item-size">32oz container</div>
+                    </div>
+                    <div class="price">$8.49</div>
                 </div>
             </div>
         </div>
 
-        <div class="menu-section">
-            <div class="section-header">
-                <h2 class="section-title">Italian Sausage</h2>
-                <p class="section-description">Authentic Italian sausage from family recipes</p>
-            </div>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="item-name">Italian Sausage (Small)</div>
-                    <div class="item-description">Traditional Italian seasoning</div>
-                    <div class="item-size">2lb package</div>
-                    <div class="item-price">$7.70</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Italian Sausage Links</div>
-                    <div class="item-description">Pre-formed links, ready to cook</div>
-                    <div class="item-size">2lb package</div>
-                    <div class="item-price">$8.80</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Italian Sausage (Bulk)</div>
-                    <div class="item-description">Perfect for large gatherings</div>
-                    <div class="item-size">5lb package</div>
-                    <div class="item-price">$14.75</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <div class="section-header">
-                <h2 class="section-title">Sauces & Extras</h2>
-                <p class="section-description">Homemade sauces and specialty items</p>
-            </div>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="item-name">Homemade Sauce (Pints)</div>
-                    <div class="item-description">Traditional marinara sauce</div>
-                    <div class="item-size">16oz container</div>
-                    <div class="item-price">$4.80</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Homemade Sauce (Quarts)</div>
-                    <div class="item-description">Family size portion</div>
-                    <div class="item-size">32oz container</div>
-                    <div class="item-price">$8.35</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Gourmet Meatballs</div>
-                    <div class="item-description">Hand-rolled, seasoned perfectly</div>
-                    <div class="item-size">24oz package</div>
-                    <div class="item-price">$16.10</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Roasted Pepper Sauce</div>
-                    <div class="item-description">Rich roasted red pepper sauce</div>
-                    <div class="item-size">32oz container</div>
-                    <div class="item-price">$7.05</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Rose Sauce</div>
-                    <div class="item-description">Creamy tomato and cream sauce blend</div>
-                    <div class="item-size">32oz container</div>
-                    <div class="item-price">$6.95</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Vodka Sauce</div>
-                    <div class="item-description">Traditional vodka cream sauce</div>
-                    <div class="item-size">32oz container</div>
-                    <div class="item-price">$6.99</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Custom Orders</div>
-                    <div class="item-description">Special requests welcome</div>
-                    <div class="item-size">Call for pricing</div>
-                    <div class="item-price">Call</div>
-                </div>
-            </div>
-        </div>
-
+        <!-- Order Information -->
         <div class="order-info">
             <h3>How to Order</h3>
-            <div class="order-methods">
-                <div class="order-method">
+            <div class="order-grid">
+                <div class="order-box">
+                    <div class="order-icon phone-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
                     <h4>Call to Order</h4>
                     <p>Call ahead for availability and pickup times. We'll have your order ready when you arrive.</p>
                 </div>
-                <div class="order-method">
+                <div class="order-box">
+                    <div class="order-icon fresh-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
                     <h4>Fresh Daily</h4>
                     <p>Made fresh using traditional Italian recipes and methods from authentic Northeast kitchens.</p>
                 </div>
-                <div class="order-method">
+                <div class="order-box">
+                    <div class="order-icon custom-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
                     <h4>Custom Orders</h4>
                     <p>Special requests and custom quantities welcome with advance notice for events and gatherings.</p>
                 </div>
             </div>
-            <p style="margin-top: 1rem;"><strong>Location:</strong> Myrtle Beach, SC | <strong>Contact:</strong> <a href="https://www.facebook.com/share/14H35yfvq22/?mibextid=wwXIfr" target="_blank" style="color: white; text-decoration: underline;">Message us on Facebook</a></p>
+            <div class="disclaimer">
+                <p><strong>Location:</strong> Myrtle Beach, SC | <strong>Contact:</strong> <a href="https://www.facebook.com/share/14H35yfvq22/?mibextid=wwXIfr" target="_blank" style="color: var(--primary-color); text-decoration: none;">Message us on Facebook</a></p>
+                <p>Prices subject to change • All pasta products contain wheat and eggs</p>
+                <p>Please inform us of any food allergies when ordering</p>
+            </div>
         </div>
     </div>
 
-    <div class="footer-info">
-        <p><strong>Prices subject to change</strong> • All pasta products contain wheat and eggs</p>
-        <p>Please inform us of any food allergies when ordering</p>
-    </div>
-
-    <!-- JavaScript for mobile navigation -->
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+        // Print optimization
+        window.addEventListener('beforeprint', function() {
+            document.body.style.background = 'white';
         });
+        
+        // Mobile Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
 
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }));
+                // Close mobile menu when clicking on a nav link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
     </script>
 </body>
 </html>
