@@ -204,7 +204,7 @@
 
         /* Section Styling */
         .menu-section {
-            margin-bottom: 60px;
+            margin-bottom: 20px;
             background: var(--white);
             border-radius: 20px;
             box-shadow: var(--shadow-light);
@@ -212,19 +212,41 @@
         }
 
         .section-header {
-            padding: 40px;
+            padding: 30px 40px;
             color: var(--white);
             text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .section-header:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 15px;
+        }
+
+        .section-header::after {
+            content: '▼';
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .section-header.active::after {
+            transform: translateY(-50%) rotate(180deg);
         }
 
         .section-header p {
@@ -263,6 +285,18 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             gap: 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+
+        .menu-items.active {
+            max-height: 5000px;
+            transition: max-height 0.5s ease-in;
+        }
+
+        .menu-items.collapsed {
+            padding: 0 40px;
         }
 
         .menu-item {
@@ -848,6 +882,27 @@
                         navMenu.classList.remove('active');
                     });
                 });
+            }
+
+            // Collapsible Menu Sections
+            const sectionHeaders = document.querySelectorAll('.section-header');
+            
+            sectionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const menuItems = this.nextElementSibling;
+                    const isActive = menuItems.classList.contains('active');
+                    
+                    // Toggle active class
+                    this.classList.toggle('active');
+                    menuItems.classList.toggle('active');
+                    menuItems.classList.toggle('collapsed', isActive);
+                });
+            });
+
+            // Optional: Expand first section by default
+            if (sectionHeaders.length > 0) {
+                sectionHeaders[0].classList.add('active');
+                sectionHeaders[0].nextElementSibling.classList.add('active');
             }
         });
     </script>
