@@ -468,9 +468,155 @@
 
         /* Print Styles */
         @media print {
-            .navbar, .btn { display: none !important; }
-            body { background: white !important; }
-            .menu-section { page-break-inside: avoid; }
+            /* Hide interactive elements */
+            .navbar, .btn, .hamburger { display: none !important; }
+            
+            /* Clean white background */
+            body { 
+                background: white !important; 
+                font-size: 12pt;
+            }
+            
+            /* Header adjustments */
+            .header {
+                padding: 20px 20px 30px;
+                margin-top: 0;
+            }
+            
+            .header h1 {
+                font-size: 32pt;
+                margin-bottom: 10px;
+            }
+            
+            .header .subtitle {
+                font-size: 14pt;
+                margin-bottom: 10px;
+            }
+            
+            .header .contact-info {
+                font-size: 11pt;
+                margin-bottom: 0;
+            }
+            
+            /* Menu container */
+            .menu-container {
+                padding: 20px;
+            }
+            
+            /* Section styling */
+            .menu-section {
+                page-break-inside: avoid;
+                margin-bottom: 30px;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            
+            /* Force all sections to expand */
+            .menu-items {
+                max-height: none !important;
+                padding: 20px 30px !important;
+                display: block !important;
+                overflow: visible !important;
+            }
+            
+            /* Remove collapse arrow */
+            .section-header::after {
+                display: none !important;
+            }
+            
+            .section-header {
+                cursor: default;
+                padding: 15px 30px !important;
+                border-radius: 0;
+            }
+            
+            .section-header h2 {
+                padding-right: 0 !important;
+                font-size: 18pt;
+            }
+            
+            /* Menu items in single column for clarity */
+            .menu-item {
+                display: flex !important;
+                justify-content: space-between !important;
+                padding: 12px 0 !important;
+                border-bottom: 1px solid #ddd !important;
+                page-break-inside: avoid;
+                transform: none !important;
+            }
+            
+            .menu-item:hover {
+                transform: none !important;
+                padding-left: 0 !important;
+            }
+            
+            .menu-item:last-child {
+                border-bottom: 1px solid #ddd !important;
+            }
+            
+            .item-name {
+                font-size: 11pt !important;
+                font-weight: 600;
+            }
+            
+            .item-description {
+                font-size: 9pt !important;
+                color: #666 !important;
+            }
+            
+            .item-size {
+                font-size: 8pt !important;
+                color: #888 !important;
+            }
+            
+            .price {
+                font-size: 11pt !important;
+                font-weight: 700;
+                margin-left: 15px !important;
+            }
+            
+            /* Order info section */
+            .order-info {
+                page-break-before: always;
+                padding: 20px;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            
+            .order-info h3 {
+                font-size: 20pt;
+                margin-bottom: 20px;
+            }
+            
+            .order-grid {
+                display: block;
+                margin-bottom: 20px;
+            }
+            
+            .order-box {
+                margin-bottom: 15px;
+            }
+            
+            .order-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 16pt;
+            }
+            
+            .order-box h4 {
+                font-size: 12pt;
+            }
+            
+            .order-box p {
+                font-size: 10pt;
+            }
+            
+            .disclaimer {
+                font-size: 9pt;
+                padding-top: 15px;
+            }
+            
+            /* Preserve colors for brand distinction */
             * { 
                 color-adjust: exact;
                 -webkit-print-color-adjust: exact;
