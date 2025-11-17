@@ -471,7 +471,11 @@
             .navbar, .btn { display: none !important; }
             body { background: white !important; }
             .menu-section { page-break-inside: avoid; }
-            * { color-adjust: exact; }
+            * { 
+                color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
         }
     </style>
 </head>
