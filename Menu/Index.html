@@ -233,6 +233,7 @@
             align-items: center;
             justify-content: center;
             gap: 15px;
+            padding-right: 60px;
         }
 
         .section-header::after {
@@ -243,6 +244,7 @@
             transform: translateY(-50%);
             font-size: 1.5rem;
             transition: var(--transition);
+            flex-shrink: 0;
         }
 
         .section-header.active::after {
@@ -899,11 +901,7 @@
                 });
             });
 
-            // Optional: Expand first section by default
-            if (sectionHeaders.length > 0) {
-                sectionHeaders[0].classList.add('active');
-                sectionHeaders[0].nextElementSibling.classList.add('active');
-            }
+            // All sections start collapsed (removed auto-expand first section)
         });
     </script>
 </body>
