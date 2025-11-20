@@ -49,74 +49,6 @@
             flex-shrink: 0;
         }
         
-        /* Photo Gallery Section */
-        .photos {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #FDF6E3 0%, #F5F2E8 100%);
-        }
-        
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .photo-item {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            aspect-ratio: 4/3;
-        }
-        
-        .photo-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-        }
-        
-        .photo-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        
-        .photo-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .photo-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(192, 57, 43, 0.95), transparent);
-            color: white;
-            padding: 30px 20px 20px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-        
-        .photo-item:hover .photo-overlay {
-            transform: translateY(0);
-        }
-        
-        .photo-overlay h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin: 0 0 8px 0;
-            font-weight: 700;
-        }
-        
-        .photo-overlay p {
-            margin: 0;
-            font-size: 1rem;
-            opacity: 0.95;
-        }
-        
         @media (max-width: 768px) {
             .food-photo {
                 height: 60px;
@@ -124,15 +56,6 @@
             .item-image {
                 width: 60px;
                 height: 60px;
-            }
-            
-            .photo-gallery {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .photos {
-                padding: 60px 0;
             }
         }
     </style>
@@ -149,7 +72,6 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="menu/" class="nav-link">Menu</a></li>
-                <li><a href="#photos" class="nav-link">Photos</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -198,65 +120,6 @@
                     <h4>Save Time</h4>
                     <p>Restaurant-quality meals in 15 minutes</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Photos Section -->
-    <section id="photos" class="photos">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Food Gallery</h2>
-                <p>See what makes Jersey Jems special</p>
-            </div>
-            <div class="photo-gallery">
-                <div class="photo-item">
-                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&q=80" alt="Fresh Ravioli" loading="lazy">
-                    <div class="photo-overlay">
-                        <h3>Fresh Ravioli</h3>
-                        <p>Handcrafted perfection</p>
-                    </div>
-                </div>
-                <div class="photo-item">
-                    <img src="https://images.unsplash.com/photo-1611599537845-1e370f2039cb?w=800&q=80" alt="Italian Pasta" loading="lazy">
-                    <div class="photo-overlay">
-                        <h3>Italian Pasta</h3>
-                        <p>Traditional recipes</p>
-                    </div>
-                </div>
-                <div class="photo-item">
-                    <img src="https://images.unsplash.com/photo-1579631542720-3a87824fff86?w=800&q=80" alt="Homemade Sauce" loading="lazy">
-                    <div class="photo-overlay">
-                        <h3>Homemade Sauce</h3>
-                        <p>Rich & flavorful</p>
-                    </div>
-                </div>
-                <div class="photo-item">
-                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80" alt="Fresh Bread" loading="lazy">
-                    <div class="photo-overlay">
-                        <h3>Fresh Bread</h3>
-                        <p>Baked to perfection</p>
-                    </div>
-                </div>
-                <div class="photo-item">
-                    <img src="https://images.unsplash.com/photo-1574448857443-dc1d7e9c4dad?w=800&q=80" alt="Italian Cookies" loading="lazy">
-                    <div class="photo-overlay">
-                        <h3>Italian Cookies</h3>
-                        <p>Sweet traditions</p>
-                    </div>
-                </div>
-                <div class="photo-item">
-                    <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=800&q=80" alt="Gnocchi" loading="lazy">
-                    <div class="photo-overlay">
-                        <h3>Gnocchi</h3>
-                        <p>Comfort in every bite</p>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://www.instagram.com/jerseyjemsmb" target="_blank" class="btn btn-primary">
-                    <i class="fab fa-instagram"></i> See More on Instagram
-                </a>
             </div>
         </div>
     </section>
@@ -318,7 +181,6 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="menu/">Menu</a></li>
-                        <li><a href="#photos">Photos</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
