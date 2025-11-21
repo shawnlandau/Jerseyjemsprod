@@ -212,7 +212,7 @@
         }
 
         .section-header {
-            padding: 30px 40px;
+            padding: 20px 30px;
             color: var(--white);
             text-align: center;
             cursor: pointer;
@@ -226,14 +226,14 @@
         }
 
         .section-header h2 {
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: 700;
             margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            padding-right: 60px;
+            gap: 12px;
+            padding-right: 50px;
         }
 
         .section-header::after {
@@ -283,10 +283,10 @@
 
         /* Menu Items */
         .menu-items {
-            padding: 40px;
+            padding: 25px 30px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out, padding 0.3s ease-out;
@@ -298,14 +298,14 @@
         }
 
         .menu-items.collapsed {
-            padding: 0 40px;
+            padding: 0 30px;
         }
 
         .menu-item {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            padding: 25px 0;
+            padding: 15px 0;
             border-bottom: 1px solid var(--cream);
             transition: var(--transition);
         }
@@ -324,30 +324,30 @@
         }
 
         .item-name {
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             font-weight: 600;
             color: var(--text-dark);
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             font-family: var(--font-heading);
         }
 
         .item-description {
             color: var(--text-light);
-            margin-bottom: 5px;
-            font-size: 0.95rem;
+            margin-bottom: 3px;
+            font-size: 0.85rem;
         }
 
         .item-size {
             color: #999;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-style: italic;
         }
 
         .price {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--primary-color);
-            margin-left: 20px;
+            margin-left: 15px;
             font-family: var(--font-heading);
         }
 
@@ -456,169 +456,150 @@
             }
 
             .section-header {
-                padding: 30px 20px;
+                padding: 18px 15px;
             }
 
             .section-header h2 {
-                font-size: 2rem;
+                font-size: 1.4rem;
                 flex-direction: column;
-                gap: 10px;
+                gap: 8px;
             }
         }
 
-        /* Print Styles */
+        /* Print Styles - Compact Foldable Italian Menu */
         @media print {
-            /* Hide interactive elements */
-            .navbar, .btn, .hamburger { display: none !important; }
-            
-            /* Clean white background */
-            body { 
-                background: white !important; 
-                font-size: 12pt;
+            @page {
+                size: letter;
+                margin: 0.3in;
             }
             
-            /* Header adjustments */
+            /* Hide interactive elements and order info */
+            .navbar, .btn, .hamburger, .order-info { display: none !important; }
+            
+            body { 
+                background: white !important; 
+                font-size: 8pt;
+                line-height: 1.2;
+            }
+            
+            /* Compact Header */
             .header {
-                padding: 20px 20px 30px;
+                padding: 5px 0 10px;
                 margin-top: 0;
+                text-align: center;
+                border-bottom: 2px solid #000;
             }
             
             .header h1 {
-                font-size: 32pt;
-                margin-bottom: 10px;
+                font-size: 18pt;
+                margin: 0 0 3px 0;
             }
             
             .header .subtitle {
-                font-size: 14pt;
-                margin-bottom: 10px;
+                font-size: 9pt;
+                margin: 0 0 3px 0;
             }
             
             .header .contact-info {
-                font-size: 11pt;
-                margin-bottom: 0;
+                font-size: 7pt;
+                margin: 0;
             }
             
-            /* Menu container */
+            /* Multi-column layout for compact display */
             .menu-container {
-                padding: 20px;
+                padding: 5px 0 0 0;
+                column-count: 3;
+                column-gap: 15px;
+                column-rule: 1px solid #ccc;
             }
             
             /* Section styling */
             .menu-section {
+                break-inside: avoid;
+                margin-bottom: 8px;
                 page-break-inside: avoid;
-                margin-bottom: 30px;
+            }
+            
+            /* Compact section headers */
+            .section-header {
+                padding: 4px 6px !important;
+                margin-bottom: 3px;
+                background: #333 !important;
                 border-radius: 0;
-                box-shadow: none;
+            }
+            
+            .section-header::after {
+                display: none !important;
+            }
+            
+            .section-header h2 {
+                font-size: 10pt !important;
+                padding-right: 0 !important;
+                margin: 0;
+                color: white;
+                text-align: left;
+                display: block;
+            }
+            
+            .section-header h2 i {
+                display: none;
             }
             
             /* Force all sections to expand */
             .menu-items {
                 max-height: none !important;
-                padding: 20px 30px !important;
+                padding: 0 !important;
                 display: block !important;
                 overflow: visible !important;
+                grid-template-columns: 1fr !important;
             }
             
-            /* Remove collapse arrow */
-            .section-header::after {
-                display: none !important;
-            }
-            
-            .section-header {
-                cursor: default;
-                padding: 15px 30px !important;
-                border-radius: 0;
-            }
-            
-            .section-header h2 {
-                padding-right: 0 !important;
-                font-size: 18pt;
-            }
-            
-            /* Menu items in single column for clarity */
+            /* Compact menu items */
             .menu-item {
                 display: flex !important;
                 justify-content: space-between !important;
-                padding: 12px 0 !important;
-                border-bottom: 1px solid #ddd !important;
-                page-break-inside: avoid;
+                align-items: baseline !important;
+                padding: 2px 4px !important;
+                border-bottom: none !important;
+                gap: 4px;
                 transform: none !important;
             }
             
             .menu-item:hover {
                 transform: none !important;
-                padding-left: 0 !important;
+                padding-left: 4px !important;
             }
             
-            .menu-item:last-child {
-                border-bottom: 1px solid #ddd !important;
+            .item-info {
+                flex: 1;
+                min-width: 0;
             }
             
             .item-name {
-                font-size: 11pt !important;
+                font-size: 7.5pt !important;
                 font-weight: 600;
+                margin-bottom: 0 !important;
+                line-height: 1.1;
             }
             
             .item-description {
-                font-size: 9pt !important;
-                color: #666 !important;
+                display: none !important;
             }
             
             .item-size {
-                font-size: 8pt !important;
-                color: #888 !important;
+                display: none !important;
             }
             
             .price {
-                font-size: 11pt !important;
+                font-size: 7.5pt !important;
                 font-weight: 700;
-                margin-left: 15px !important;
+                margin-left: 4px !important;
+                white-space: nowrap;
+                flex-shrink: 0;
             }
             
-            /* Order info section */
-            .order-info {
-                page-break-before: always;
-                padding: 20px;
-                border-radius: 0;
-                box-shadow: none;
-            }
-            
-            .order-info h3 {
-                font-size: 20pt;
-                margin-bottom: 20px;
-            }
-            
-            .order-grid {
-                display: block;
-                margin-bottom: 20px;
-            }
-            
-            .order-box {
-                margin-bottom: 15px;
-            }
-            
-            .order-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 16pt;
-            }
-            
-            .order-box h4 {
-                font-size: 12pt;
-            }
-            
-            .order-box p {
-                font-size: 10pt;
-            }
-            
-            .disclaimer {
-                font-size: 9pt;
-                padding-top: 15px;
-            }
-            
-            /* Preserve colors for brand distinction */
+            /* Preserve print colors */
             * { 
-                color-adjust: exact;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
