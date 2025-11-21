@@ -639,7 +639,7 @@
 
     <!-- Header -->
     <div class="header">
-        <h1>Jersey Jems</h1>
+        <h1>JerseyJems</h1>
         <p class="subtitle">Authentic Italian specialties from traditional family recipes</p>
         <p class="contact-info">843-548-7730</p>
         <button onclick="window.print()" class="btn btn-primary">
@@ -1073,9 +1073,24 @@
     </div>
 
     <script>
-        // Print optimization
+        // Print optimization - expand all sections before printing
         window.addEventListener('beforeprint', function() {
             document.body.style.background = 'white';
+            // Expand all menu sections for printing
+            const allMenuItems = document.querySelectorAll('.menu-items');
+            allMenuItems.forEach(function(menuItems) {
+                menuItems.classList.add('active');
+                menuItems.classList.remove('collapsed');
+            });
+        });
+        
+        // Restore collapsed state after printing
+        window.addEventListener('afterprint', function() {
+            const allMenuItems = document.querySelectorAll('.menu-items');
+            allMenuItems.forEach(function(menuItems) {
+                menuItems.classList.remove('active');
+                menuItems.classList.add('collapsed');
+            });
         });
         
         // Mobile Navigation Toggle
