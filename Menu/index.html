@@ -283,22 +283,27 @@
 
         /* Menu Items */
         .menu-items {
-            padding: 25px 30px;
+            padding: 0;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 20px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            opacity: 0;
+            visibility: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out, opacity 0.3s ease-out, visibility 0s 0.3s;
         }
 
         .menu-items.active {
+            padding: 25px 30px;
             max-height: 5000px;
-            transition: max-height 0.5s ease-in;
+            opacity: 1;
+            visibility: visible;
+            transition: max-height 0.5s ease-in, padding 0.5s ease-in, opacity 0.3s ease-in, visibility 0s 0s;
         }
 
         .menu-items.collapsed {
-            padding: 0 30px;
+            padding: 0;
         }
 
         .menu-item {
