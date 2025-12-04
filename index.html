@@ -71,8 +71,9 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="local.html" class="nav-link"><i class="fas fa-map-marker-alt"></i> Local</a></li>
+                <li><a href="nationwide.html" class="nav-link"><i class="fas fa-shipping-fast"></i> Ship Nationwide</a></li>
                 <li><a href="menu/" class="nav-link">Menu</a></li>
-                <li><a href="#how-to-order" class="nav-link">How to Order</a></li>
                 <li><a href="#faq" class="nav-link">FAQ</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -101,6 +102,55 @@
         </div>
     </section>
 
+    <!-- Dual Channel Funnel Section - NEW -->
+    <section id="choose-your-path" class="dual-funnel">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Would You Like to Order?</h2>
+                <p>Choose the option that works best for you</p>
+            </div>
+            <div class="funnel-options">
+                <!-- LOCAL FUNNEL -->
+                <div class="funnel-card local-card">
+                    <div class="funnel-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Local to Myrtle Beach?</h3>
+                    <p class="funnel-description">Pick up at Hudson's Market or order for local pickup/delivery</p>
+                    <ul class="funnel-benefits">
+                        <li><i class="fas fa-check-circle"></i> <strong>Lower local prices</strong></li>
+                        <li><i class="fas fa-check-circle"></i> No shipping fees</li>
+                        <li><i class="fas fa-check-circle"></i> Fresh pickup at local markets</li>
+                        <li><i class="fas fa-check-circle"></i> Same-day or next-day availability</li>
+                    </ul>
+                    <a href="local.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-shopping-basket"></i> View Local Menu & Order Info
+                    </a>
+                    <p class="funnel-note">Serving Horry County & surrounding areas</p>
+                </div>
+
+                <!-- NATIONWIDE FUNNEL -->
+                <div class="funnel-card nationwide-card">
+                    <div class="funnel-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Not Local? Ship Nationwide</h3>
+                    <p class="funnel-description">Get authentic Italian specialties delivered anywhere in the USA</p>
+                    <ul class="funnel-benefits">
+                        <li><i class="fas fa-check-circle"></i> Ships to all 50 states</li>
+                        <li><i class="fas fa-check-circle"></i> Insulated packaging + dry ice</li>
+                        <li><i class="fas fa-check-circle"></i> 2-day express shipping</li>
+                        <li><i class="fas fa-check-circle"></i> Easy online ordering</li>
+                    </ul>
+                    <a href="nationwide.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-globe-americas"></i> Shop Nationwide Store
+                    </a>
+                    <p class="funnel-note">Delivered frozen to your door</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
@@ -123,6 +173,22 @@
                     <i class="fas fa-clock"></i>
                     <h4>Save Time</h4>
                     <p>Restaurant-quality meals in 15 minutes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Clarity Section - NEW -->
+    <section id="pricing-info" class="pricing-clarity">
+        <div class="container">
+            <div class="pricing-clarity-content">
+                <div class="pricing-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="pricing-text">
+                    <h3>Two Prices, One Great Product</h3>
+                    <p><strong>Local prices are lower</strong> because you pick up directly or we deliver locally. <strong>Nationwide prices are slightly higher</strong> to cover the cost of insulated packaging, dry ice, and 2-day express shipping to keep everything frozen solid.</p>
+                    <p class="pricing-subtext">Either way, you get the same authentic, high-quality Italian specialties from legendary Northeast family kitchens.</p>
                 </div>
             </div>
         </div>
@@ -248,7 +314,27 @@
                         <h3>Do you deliver?</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>Currently we offer pickup only, but we're working on delivery options for the future. Call us to discuss special arrangements for large orders.</p>
+                        <p>Yes! We offer <strong>local delivery</strong> in Horry County and <strong>nationwide shipping</strong> to all 50 states. <a href="local.html" style="color: var(--primary-color); text-decoration: underline;">Learn about local delivery</a> or <a href="nationwide.html" style="color: var(--primary-color); text-decoration: underline;">ship nationwide with 2-day express</a>.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h3>Can I order online and have it shipped?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! Visit our <a href="nationwide.html" style="color: var(--primary-color); text-decoration: underline;">nationwide shipping page</a> to order online. We use professional insulated packaging and dry ice to ship frozen Italian specialties anywhere in the USA.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>Why are prices different for local vs. shipped orders?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Local prices are lower because you pick up directly. Nationwide prices include the cost of insulated packaging, dry ice, and materials needed to keep everything frozen during 2-day shipping. Same great products, just different delivery methods!</p>
                     </div>
                 </div>
             </div>
@@ -595,5 +681,6 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
 </body>
 </html>

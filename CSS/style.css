@@ -1513,3 +1513,252 @@ img {
         font-size: 1.5rem;
     }
 }
+
+/* ========================================
+   DUAL CHANNEL FUNNEL SECTION - NEW
+   ======================================== */
+
+.dual-funnel {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+}
+
+.funnel-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.funnel-card {
+    background: var(--white);
+    padding: 50px 40px;
+    border-radius: 25px;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.funnel-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+}
+
+.funnel-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-heavy);
+    border-color: var(--accent-color);
+}
+
+.local-card::before {
+    background: linear-gradient(135deg, #27AE60, #2ECC71);
+}
+
+.nationwide-card::before {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.funnel-icon {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    box-shadow: 0 6px 20px rgba(192, 57, 43, 0.3);
+}
+
+.local-card .funnel-icon {
+    background: linear-gradient(135deg, #27AE60, #2ECC71);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+}
+
+.funnel-icon i {
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+.funnel-card h3 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: var(--font-heading);
+}
+
+.funnel-description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.funnel-benefits {
+    list-style: none;
+    margin: 30px 0;
+    padding: 0;
+}
+
+.funnel-benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+.funnel-benefits i {
+    color: #27AE60;
+    font-size: 1.2rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.funnel-card .btn {
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px 30px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.funnel-note {
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   PRICING CLARITY SECTION - NEW
+   ======================================== */
+
+.pricing-clarity {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #FFF4E6 0%, #FFE5CC 100%);
+    border-top: 3px solid var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.pricing-clarity-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-medium);
+}
+
+.pricing-icon {
+    flex-shrink: 0;
+}
+
+.pricing-icon i {
+    font-size: 4rem;
+    color: var(--accent-color);
+    display: block;
+}
+
+.pricing-text h3 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-family: var(--font-heading);
+}
+
+.pricing-text p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.pricing-text strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.pricing-subtext {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN FOR NEW SECTIONS
+   ======================================== */
+
+@media (max-width: 968px) {
+    .funnel-options {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .pricing-clarity-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .funnel-card {
+        padding: 40px 25px;
+    }
+    
+    .funnel-card h3 {
+        font-size: 1.6rem;
+    }
+    
+    .funnel-benefits li {
+        font-size: 1rem;
+    }
+    
+    .pricing-icon i {
+        font-size: 3rem;
+    }
+    
+    .pricing-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .pricing-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .funnel-card {
+        padding: 30px 20px;
+    }
+    
+    .funnel-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .funnel-icon i {
+        font-size: 2rem;
+    }
+    
+    .pricing-clarity-content {
+        padding: 25px 20px;
+    }
+}
