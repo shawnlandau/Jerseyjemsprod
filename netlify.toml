@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/menu/Index.html"
+  to = "/menu/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/Menu/Index.html"
+  to = "/Menu/index.html"
+  status = 200
+  force = true
