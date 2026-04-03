@@ -33,10 +33,17 @@
   status = 200
   force = true
 
+# Redirect nationwide page to homepage (shipping discontinued)
 [[redirects]]
   from = "/nationwide"
-  to = "/nationwide.html"
-  status = 200
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nationwide.html"
+  to = "/"
+  status = 301
   force = true
 
 [[redirects]]

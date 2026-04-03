@@ -1561,9 +1561,7 @@ img {
     background: linear-gradient(135deg, #27AE60, #2ECC71);
 }
 
-.nationwide-card::before {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-}
+/* nationwide-card removed — shipping discontinued */
 
 .funnel-icon {
     width: 90px;

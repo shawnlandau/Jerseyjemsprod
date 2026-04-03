@@ -43,13 +43,7 @@ const JERSEY_JEMS_CONFIG = {
         schedule: 'Every Thursday'
     },
     
-    // Shipping settings
-    SHIPPING: {
-        method: '2-Day Express',
-        carriers: ['FedEx', 'UPS'],
-        states: 'All 50 States',
-        typical_cost_range: '$25-45'
-    }
+    // Note: No shipping offered — local pickup & local delivery only
 };
 
 /**
