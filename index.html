@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jersey Jems - Northeast Authentic Cuisine from NY & NJ | Myrtle Beach, SC</title>
-    <meta name="description" content="Jersey Jems brings Northeast authentic cuisine from New York, New Jersey, and Philadelphia to Myrtle Beach. Traditional Italian specialties crafted with time-honored family recipes and uncompromising quality.">
-    <meta name="keywords" content="Northeast cuisine, New York food, New Jersey cuisine, authentic Italian, pasta, ravioli, sauce, Myrtle Beach, Philadelphia, traditional recipes">
+    <title>Jersey Jems – Tournament Meals for Myrtle Beach Baseball Families | Ready-to-Go Italian Food</title>
+    <meta name="description" content="Jersey Jems makes tournament week easy for Myrtle Beach baseball families. Ready-to-go pasta dinners, breakfast packs, and team meal bundles. Order ahead, pick up fast, feed your crew in 15 minutes. Perfect for the Ripken Experience and Myrtle Beach tournament stays.">
+    <meta name="keywords" content="tournament meals Myrtle Beach, Ripken Experience Myrtle Beach meals, baseball families Myrtle Beach, ready-to-go meals Myrtle Beach, family meals for Myrtle Beach tournaments, team meals Myrtle Beach, pasta dinner Myrtle Beach, condo meals Myrtle Beach tournament">
     
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jerseyjems.com/">
-    <meta property="og:title" content="Jersey Jems - Northeast Authentic Cuisine">
-    <meta property="og:description" content="Authentic Italian specialties from NY & NJ family kitchens delivered to Myrtle Beach. Traditional ravioli, pasta, sauces, and more.">
+    <meta property="og:title" content="Jersey Jems – Easy Tournament Meals for Myrtle Beach Baseball Families">
+    <meta property="og:description" content="Ready-to-go pasta dinners, breakfast packs, and team bundles. Order ahead, pick up fast, feed your crew in 15 minutes. Perfect for Ripken Experience tournament stays.">
     <meta property="og:site_name" content="Jersey Jems">
     
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Jersey Jems - Northeast Authentic Cuisine">
-    <meta name="twitter:description" content="Authentic Italian specialties from NY & NJ family kitchens delivered to Myrtle Beach. Traditional ravioli, pasta, sauces, and more.">
+    <meta name="twitter:title" content="Jersey Jems – Tournament Meals for Myrtle Beach Baseball Families">
+    <meta name="twitter:description" content="Ready-to-go pasta dinners, breakfast packs & team bundles. Order ahead, pick up fast. Perfect for Myrtle Beach baseball tournament families.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://jerseyjems.com/">
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='30' fill='%23D2691E'>JJ</text></svg>">
@@ -29,38 +32,498 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     
-    <!-- Food Photo Styles -->
     <style>
-        .food-photo {
-            width: 100%;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        /* ================================================
+           TOURNAMENT BANNER - above navbar
+        ================================================ */
+        .tournament-banner {
+            background: linear-gradient(135deg, #1a5276, #2E86AB);
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.92rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            position: relative;
+            z-index: 1001;
         }
-        
-        .item-image {
-            width: 80px;
-            height: 80px;
+        .tournament-banner a {
+            color: #F39C12;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .tournament-banner a:hover { text-decoration: underline; }
+
+        /* ================================================
+           TOURNAMENT CALLOUT - hero badge
+        ================================================ */
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(243,156,18,0.95);
+            color: #2C1810;
+            font-weight: 700;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .hero-badge i { font-size: 1rem; }
+
+        /* ================================================
+           QUICK WINS BAR
+        ================================================ */
+        .quick-wins {
+            background: var(--white);
+            padding: 18px 0;
+            border-bottom: 3px solid var(--accent-color);
+        }
+        .quick-wins-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .quick-win-item {
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin-right: 15px;
+            gap: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        .quick-win-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* ================================================
+           TOURNAMENT FOCUS SECTION
+        ================================================ */
+        .tournament-focus {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a5276 0%, #154360 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .tournament-focus::before {
+            content: '⚾';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.04;
+            right: -60px;
+            top: -40px;
+            line-height: 1;
+        }
+        .tournament-focus .section-header h2 {
+            color: var(--white);
+        }
+        .tournament-focus .section-header h2::after {
+            background: linear-gradient(90deg, #F39C12, #E67E22);
+        }
+        .tournament-focus .section-header p {
+            color: rgba(255,255,255,0.85);
+        }
+        .tournament-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+        .tournament-card {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            padding: 30px 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        .tournament-card:hover {
+            background: rgba(255,255,255,0.18);
+            transform: translateY(-6px);
+            border-color: #F39C12;
+        }
+        .tournament-card .tc-icon {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .tournament-card h3 {
+            font-size: 1.15rem;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+        .tournament-card p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.92rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ================================================
+           MEAL BUNDLES SECTION
+        ================================================ */
+        .meal-bundles {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+        .bundles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+        }
+        .bundle-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 32px 28px;
+            box-shadow: var(--shadow-light);
+            border-top: 5px solid var(--primary-color);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .bundle-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-medium);
+        }
+        .bundle-card.featured {
+            border-top-color: #F39C12;
+            background: linear-gradient(160deg, #fff 80%, #FFF4E6 100%);
+        }
+        .bundle-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 14px;
+            align-self: flex-start;
+        }
+        .bundle-badge.gold {
+            background: linear-gradient(135deg, #E67E22, #F39C12);
+        }
+        .bundle-card h3 {
+            font-size: 1.35rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .bundle-tagline {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+        .bundle-includes {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px 0;
+        }
+        .bundle-includes li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 0.93rem;
+            color: var(--text-dark);
+            margin-bottom: 7px;
+        }
+        .bundle-includes li i {
+            color: #27AE60;
+            margin-top: 3px;
             flex-shrink: 0;
         }
-        
+        .bundle-best-for {
+            font-size: 0.85rem;
+            background: var(--light-bg);
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: var(--text-light);
+            margin-bottom: 18px;
+        }
+        .bundle-best-for strong { color: var(--text-dark); }
+        .bundle-price {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+        .bundle-card .btn {
+            margin-top: auto;
+        }
+
+        /* ================================================
+           USE-CASE MEAL CATEGORIES
+        ================================================ */
+        .use-case-meals {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .use-case-card {
+            background: var(--light-bg);
+            border-radius: 16px;
+            padding: 28px 20px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .use-case-card:hover {
+            border-color: var(--accent-color);
+            background: var(--white);
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-4px);
+        }
+        .use-case-card .uc-emoji {
+            font-size: 2.8rem;
+            display: block;
+            margin-bottom: 12px;
+        }
+        .use-case-card h4 {
+            font-size: 1rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .use-case-card p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* ================================================
+           HOW IT WORKS - TOURNAMENT VERSION
+        ================================================ */
+        .how-it-works-tournament {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--background-cream) 0%, var(--light-bg) 100%);
+        }
+
+        /* ================================================
+           TRUST BAR
+        ================================================ */
+        .trust-bar {
+            padding: 50px 0;
+            background: var(--white);
+            border-top: 1px solid var(--cream);
+            border-bottom: 1px solid var(--cream);
+        }
+        .trust-bar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .trust-item {
+            padding: 20px 16px;
+        }
+        .trust-item i {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            display: block;
+        }
+        .trust-item h4 {
+            font-size: 1rem;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+        .trust-item p {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* ================================================
+           INQUIRY FORM
+        ================================================ */
+        .tournament-inquiry {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a5276 0%, #154360 100%);
+            color: var(--white);
+        }
+        .tournament-inquiry .section-header h2 { color: var(--white); }
+        .tournament-inquiry .section-header h2::after {
+            background: linear-gradient(90deg, #F39C12, #E67E22);
+        }
+        .tournament-inquiry .section-header p { color: rgba(255,255,255,0.85); }
+        .inquiry-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .inquiry-info h3 {
+            color: var(--white);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+        .inquiry-info p {
+            color: rgba(255,255,255,0.85);
+            line-height: 1.7;
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+        .inquiry-contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0 0 0;
+        }
+        .inquiry-contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            margin-bottom: 14px;
+            font-weight: 500;
+        }
+        .inquiry-contact-list li i {
+            color: #F39C12;
+            font-size: 1.1rem;
+            width: 20px;
+        }
+        .inquiry-contact-list li a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+        }
+        .inquiry-contact-list li a:hover {
+            color: #F39C12;
+            text-decoration: underline;
+        }
+        .inquiry-form-box {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .inquiry-form-box h3 {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e1e8ed;
+            border-radius: 10px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            background: var(--light-bg);
+            transition: all 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: var(--white);
+            box-shadow: 0 0 0 3px rgba(192,57,43,0.1);
+        }
+        .form-row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .form-submit-btn {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 8px;
+        }
+        .form-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(192,57,43,0.35);
+        }
+        .form-note {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-top: 10px;
+        }
         @media (max-width: 768px) {
-            .food-photo {
-                height: 60px;
-            }
-            .item-image {
-                width: 60px;
-                height: 60px;
-            }
+            .inquiry-layout { grid-template-columns: 1fr; gap: 40px; }
+            .inquiry-form-box { padding: 28px 20px; }
+            .form-row-2 { grid-template-columns: 1fr; }
+        }
+
+        /* ================================================
+           NAV TOURNAMENT LINK HIGHLIGHT
+        ================================================ */
+        .nav-link.tournament-nav {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white) !important;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        .nav-link.tournament-nav:hover {
+            opacity: 0.88;
+            transform: translateY(-1px);
+        }
+        .nav-link.tournament-nav::after { display: none; }
+
+        /* ================================================
+           MOBILE ADJUSTMENTS
+        ================================================ */
+        @media (max-width: 768px) {
+            .quick-wins-grid { gap: 20px; }
+            .quick-win-item { font-size: 0.88rem; }
+            .tournament-cards { grid-template-columns: 1fr 1fr; }
+            .bundles-grid { grid-template-columns: 1fr; }
+            .use-case-grid { grid-template-columns: 1fr 1fr; }
+            .trust-bar-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .tournament-cards { grid-template-columns: 1fr; }
+            .use-case-grid { grid-template-columns: 1fr; }
+            .trust-bar-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Tournament Banner -->
+    <div class="tournament-banner">
+        ⚾ Playing at the Ripken Experience or Myrtle Beach tournaments? &nbsp;
+        <a href="tournament-meals.html">See our Tournament Meal Packs →</a>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
@@ -71,6 +534,7 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="tournament-meals.html" class="nav-link tournament-nav"><i class="fas fa-baseball-ball"></i> Tournament Meals</a></li>
                 <li><a href="local.html" class="nav-link"><i class="fas fa-map-marker-alt"></i> Local</a></li>
                 <li><a href="nationwide.html" class="nav-link"><i class="fas fa-shipping-fast"></i> Ship Nationwide</a></li>
                 <li><a href="menu/" class="nav-link">Menu</a></li>
@@ -90,19 +554,376 @@
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Smell the Bread<br>Taste the Tradition</h1>
-                <p class="hero-subtitle">Authentic NY, NJ & Philly food down South. Discover frozen specialties from legendary Northeast kitchens, bringing traditional Italian flavors to Myrtle Beach.</p>
+                <div class="hero-badge">
+                    <i class="fas fa-baseball-ball"></i>
+                    Tournament Families Welcome
+                </div>
+                <h1 class="hero-title">Easy Meals for<br>Myrtle Beach Baseball</h1>
+                <p class="hero-subtitle">Pasta dinners, breakfast packs &amp; team bundles — ready to go in 15 minutes. Order ahead so your crew eats well all tournament week, no restaurant hassle.</p>
                 <div class="hero-buttons">
-                    <a href="tel:843-548-7730" class="btn btn-primary btn-large">
-                        <i class="fas fa-phone"></i> Call to Order<br>843-548-7730
+                    <a href="tournament-meals.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-baseball-ball"></i> Tournament Meal Packs
                     </a>
-                    <a href="menu/" class="btn btn-secondary">View Menu & Prices</a>
+                    <a href="menu/" class="btn btn-secondary">View Full Menu</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Dual Channel Funnel Section - NEW -->
+    <!-- Quick Wins Bar -->
+    <div class="quick-wins">
+        <div class="container">
+            <div class="quick-wins-grid">
+                <div class="quick-win-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Ready in 10–15 Minutes</span>
+                </div>
+                <div class="quick-win-item">
+                    <i class="fas fa-phone"></i>
+                    <span>Order Ahead: 843-548-7730</span>
+                </div>
+                <div class="quick-win-item">
+                    <i class="fas fa-home"></i>
+                    <span>Perfect for Condos &amp; Villas</span>
+                </div>
+                <div class="quick-win-item">
+                    <i class="fas fa-users"></i>
+                    <span>Family &amp; Team Sizes Available</span>
+                </div>
+                <div class="quick-win-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Myrtle Beach Pickup &amp; Delivery</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tournament Focus Section -->
+    <section id="tournament-families" class="tournament-focus">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for Busy Baseball Families</h2>
+                <p>Tournament week is hectic. Jersey Jems takes one big thing off your plate — dinner.</p>
+            </div>
+            <div class="tournament-cards">
+                <div class="tournament-card">
+                    <span class="tc-icon">🍝</span>
+                    <h3>Arrival Night Dinner</h3>
+                    <p>Land, check in, and eat a real meal in 15 minutes. No hunting for restaurants after a long drive.</p>
+                </div>
+                <div class="tournament-card">
+                    <span class="tc-icon">🌅</span>
+                    <h3>Game-Day Breakfasts</h3>
+                    <p>Quick bagels, sausage, and pastries to fuel your players before those early morning games.</p>
+                </div>
+                <div class="tournament-card">
+                    <span class="tc-icon">🏆</span>
+                    <h3>Carb-Load Night</h3>
+                    <p>The night before big games, load up the team with authentic pasta, ravioli, and sausage dinners.</p>
+                </div>
+                <div class="tournament-card">
+                    <span class="tc-icon">🏠</span>
+                    <h3>Condo &amp; Villa Stays</h3>
+                    <p>Have a kitchen? Stock your freezer on arrival and eat well every night without the restaurant bill.</p>
+                </div>
+                <div class="tournament-card">
+                    <span class="tc-icon">👨‍👩‍👧‍👦</span>
+                    <h3>Team Meal Planning</h3>
+                    <p>Coach or team parent feeding 10, 15, or 20+ players? We handle large orders. Just call ahead.</p>
+                </div>
+                <div class="tournament-card">
+                    <span class="tc-icon">🎉</span>
+                    <h3>Win Night Treats</h3>
+                    <p>Celebrate a win with authentic Italian cookies and pastries. The kids will love it.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="tournament-meals.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-baseball-ball"></i> See All Tournament Meal Options
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meal Bundles Section -->
+    <section id="bundles" class="meal-bundles">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tournament Meal Bundles</h2>
+                <p>Ready-to-go combinations built for baseball families. Order ahead, pick up fast, eat well.</p>
+            </div>
+            <div class="bundles-grid">
+
+                <!-- Bundle 1 -->
+                <div class="bundle-card featured">
+                    <span class="bundle-badge gold">⭐ Most Popular</span>
+                    <h3>Arrival Night Pasta Pack</h3>
+                    <p class="bundle-tagline">Skip restaurants on night one — just boil water and eat</p>
+                    <ul class="bundle-includes">
+                        <li><i class="fas fa-check-circle"></i> Scaramuzza Jumbo Ravioli (pkg)</li>
+                        <li><i class="fas fa-check-circle"></i> Talluto's Cheese Ravioli (pkg)</li>
+                        <li><i class="fas fa-check-circle"></i> Scaramuzza Quart Sauce (32 oz)</li>
+                        <li><i class="fas fa-check-circle"></i> Dinner Rolls 12-pack</li>
+                    </ul>
+                    <div class="bundle-best-for"><strong>Best for:</strong> Family of 4–6, condo/villa stay, arrival dinner</div>
+                    <div class="bundle-price">From ~$34 | <em>Call for exact pricing</em></div>
+                    <a href="tel:843-548-7730" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call to Order
+                    </a>
+                </div>
+
+                <!-- Bundle 2 -->
+                <div class="bundle-card">
+                    <span class="bundle-badge">Game Day</span>
+                    <h3>Game-Day Breakfast Pack</h3>
+                    <p class="bundle-tagline">Fuel your players before the first pitch</p>
+                    <ul class="bundle-includes">
+                        <li><i class="fas fa-check-circle"></i> Plain Bagels 6-pack</li>
+                        <li><i class="fas fa-check-circle"></i> Raisin Bagels 6-pack</li>
+                        <li><i class="fas fa-check-circle"></i> Breakfast Sausage Links (pkg)</li>
+                        <li><i class="fas fa-check-circle"></i> Bauli Vanilla Croissants</li>
+                    </ul>
+                    <div class="bundle-best-for"><strong>Best for:</strong> Early-morning games, family of 4+, team warm-up meal</div>
+                    <div class="bundle-price">From ~$29 | <em>Call for exact pricing</em></div>
+                    <a href="tel:843-548-7730" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call to Order
+                    </a>
+                </div>
+
+                <!-- Bundle 3 -->
+                <div class="bundle-card">
+                    <span class="bundle-badge">Team Meal</span>
+                    <h3>Team Carb-Load Dinner Pack</h3>
+                    <p class="bundle-tagline">Feed the whole roster the night before a big game</p>
+                    <ul class="bundle-includes">
+                        <li><i class="fas fa-check-circle"></i> DiMartino Spaghetti (2–3 pkgs)</li>
+                        <li><i class="fas fa-check-circle"></i> Cheese Cavatelli (2 pkgs)</li>
+                        <li><i class="fas fa-check-circle"></i> Scaramuzza Sauce — Quart (2 jars)</li>
+                        <li><i class="fas fa-check-circle"></i> Martin's Italian Sausage (2 pkgs)</li>
+                        <li><i class="fas fa-check-circle"></i> Kaiser Rolls 6-pack</li>
+                    </ul>
+                    <div class="bundle-best-for"><strong>Best for:</strong> Teams of 10–15, coach-organized meal, tournament carb night</div>
+                    <div class="bundle-price">Custom team pricing available — call ahead</div>
+                    <a href="tel:843-548-7730" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call for Team Pricing
+                    </a>
+                </div>
+
+                <!-- Bundle 4 -->
+                <div class="bundle-card">
+                    <span class="bundle-badge">Condo Stay</span>
+                    <h3>Condo Week Starter Pack</h3>
+                    <p class="bundle-tagline">Stock the freezer and eat well all week without shopping</p>
+                    <ul class="bundle-includes">
+                        <li><i class="fas fa-check-circle"></i> Talluto's Cheese Ravioli</li>
+                        <li><i class="fas fa-check-circle"></i> Potato Gnocchi</li>
+                        <li><i class="fas fa-check-circle"></i> Mild Italian Sausage</li>
+                        <li><i class="fas fa-check-circle"></i> Scaramuzza Sauce — Pint + Quart</li>
+                        <li><i class="fas fa-check-circle"></i> Bagels 6-pack + Dinner Rolls</li>
+                    </ul>
+                    <div class="bundle-best-for"><strong>Best for:</strong> Families renting for a full week, condo/villa with kitchen</div>
+                    <div class="bundle-price">From ~$60 | <em>Call for exact pricing</em></div>
+                    <a href="tel:843-548-7730" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call to Order
+                    </a>
+                </div>
+
+                <!-- Bundle 5 -->
+                <div class="bundle-card">
+                    <span class="bundle-badge">Celebrate</span>
+                    <h3>Win Night Dessert Pack</h3>
+                    <p class="bundle-tagline">Celebrate a big win with authentic treats from the Northeast</p>
+                    <ul class="bundle-includes">
+                        <li><i class="fas fa-check-circle"></i> Isgro Assorted Italian Cookies (lb)</li>
+                        <li><i class="fas fa-check-circle"></i> Isgro Cheesecake (3 inch, 2–3 pcs)</li>
+                        <li><i class="fas fa-check-circle"></i> Isgro Rum Square or Limoncello</li>
+                        <li><i class="fas fa-check-circle"></i> Bauli Vanilla Croissants</li>
+                    </ul>
+                    <div class="bundle-best-for"><strong>Best for:</strong> Post-game celebration, kids &amp; parents, team treat</div>
+                    <div class="bundle-price">From ~$45 | <em>Call for exact pricing</em></div>
+                    <a href="tel:843-548-7730" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call to Order
+                    </a>
+                </div>
+
+                <!-- Bundle 6 -->
+                <div class="bundle-card">
+                    <span class="bundle-badge">Quick &amp; Easy</span>
+                    <h3>15-Minute Family Dinner Pack</h3>
+                    <p class="bundle-tagline">After a long day of games — dinner in minutes, not an hour</p>
+                    <ul class="bundle-includes">
+                        <li><i class="fas fa-check-circle"></i> Scaramuzza Cheese Cavatelli</li>
+                        <li><i class="fas fa-check-circle"></i> Talluto's Tomato Sauce</li>
+                        <li><i class="fas fa-check-circle"></i> Hot or Mild Italian Sausage</li>
+                        <li><i class="fas fa-check-circle"></i> Long Semolina Rolls</li>
+                    </ul>
+                    <div class="bundle-best-for"><strong>Best for:</strong> Exhausted parents, night-after-games dinner, family of 4</div>
+                    <div class="bundle-price">From ~$28 | <em>Call for exact pricing</em></div>
+                    <a href="tel:843-548-7730" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call to Order
+                    </a>
+                </div>
+
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 20px;">Want a custom bundle? We'll build one around your family size, arrival date, and schedule.</p>
+                <a href="tel:843-548-7730" class="btn btn-primary btn-large">
+                    <i class="fas fa-phone"></i> Call 843-548-7730 to Build Your Bundle
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use-Case Meal Categories -->
+    <section class="use-case-meals">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Meal Occasion</h2>
+                <p>Find exactly what you need for every moment of tournament week</p>
+            </div>
+            <div class="use-case-grid">
+                <a href="menu/" class="use-case-card" style="text-decoration: none;">
+                    <span class="uc-emoji">🍝</span>
+                    <h4>15-Minute Family Dinners</h4>
+                    <p>Ravioli, gnocchi, pasta + sauce. On the table before anyone melts down.</p>
+                </a>
+                <a href="menu/" class="use-case-card" style="text-decoration: none;">
+                    <span class="uc-emoji">🏋️</span>
+                    <h4>Team Carb-Load Packs</h4>
+                    <p>Spaghetti, cavatelli, sausage in bulk. Feed the roster right.</p>
+                </a>
+                <a href="menu/" class="use-case-card" style="text-decoration: none;">
+                    <span class="uc-emoji">☀️</span>
+                    <h4>Quick Game-Day Breakfasts</h4>
+                    <p>Bagels, sausage links, croissants. Ready before the 8am start.</p>
+                </a>
+                <a href="menu/" class="use-case-card" style="text-decoration: none;">
+                    <span class="uc-emoji">🎂</span>
+                    <h4>Dessert &amp; Celebration Add-Ons</h4>
+                    <p>Isgro cookies, cheesecake, pastries. For win nights and team moments.</p>
+                </a>
+                <a href="menu/" class="use-case-card" style="text-decoration: none;">
+                    <span class="uc-emoji">❄️</span>
+                    <h4>Condo Freezer Starter Packs</h4>
+                    <p>Stock up on arrival. Enough for a full week of easy family meals.</p>
+                </a>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="menu/" class="btn btn-secondary">View Full Menu &amp; Prices →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works - Tournament -->
+    <section class="how-it-works-tournament">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Tournament Ordering Works</h2>
+                <p>Simple, fast, stress-free — designed for busy families on the road</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Order Before You Arrive</h3>
+                    <p>Call or email before your tournament week. Tell us your arrival date, family size, and what meals you need. We'll confirm availability and have everything ready.</p>
+                    <a href="tel:843-548-7730" class="step-link">Call 843-548-7730 →</a>
+                </div>
+                
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Pick Up on Your Schedule</h3>
+                    <p>Grab your order at a convenient Myrtle Beach location. We'll confirm exact time and pickup details when you order. Fast in-and-out — no waiting around.</p>
+                    <p class="pickup-note">Local delivery also available for Horry County</p>
+                </div>
+                
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Cook in 10–15 Minutes</h3>
+                    <p>Everything is ready to heat and serve. Boil pasta, warm the sauce, done. No prep, no recipes, no mess. Your crew eats real food, fast.</p>
+                    <p class="pickup-note">Cash, Venmo, Zelle &amp; cards accepted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Families Choose Jersey Jems</h2>
+                <p>Real food from legendary Northeast kitchens — the kind of meal your family actually wants after a long day at the ballpark</p>
+            </div>
+            <div class="features-simple">
+                <div class="feature">
+                    <i class="fas fa-star"></i>
+                    <h4>Authentic Northeast Quality</h4>
+                    <p>From real NY, NJ &amp; Philly family kitchens — not a factory. Brands like Talluto's, Scaramuzza, Martin's, and Isgro that have been feeding families for generations.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Tournament-Week Convenient</h4>
+                    <p>Order ahead before your trip. Pick up on arrival. Heat in 10–15 minutes. Eat a real meal every night without the restaurant wait or the drive-thru guilt.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-users"></i>
+                    <h4>Sizes for Every Group</h4>
+                    <p>Feeding a family of 4 or a team of 20? We handle it all. No minimum order, large orders welcome, custom bundles available when you call.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-bar-grid">
+                <div class="trust-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>Order Ahead</h4>
+                    <p>Order before your trip and everything is ready when you arrive</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-boxes"></i>
+                    <h4>Large Orders Welcome</h4>
+                    <p>Team meals, bulk pasta packs, and custom bundles available</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-home"></i>
+                    <h4>Condo &amp; Villa Friendly</h4>
+                    <p>Frozen and fresh — perfect for units with a full kitchen</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-truck"></i>
+                    <h4>Local Delivery Available</h4>
+                    <p>Horry County delivery for orders to your condo or resort</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-credit-card"></i>
+                    <h4>Easy Payment</h4>
+                    <p>Cash, Venmo, Zelle &amp; all major credit cards accepted</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dual Channel Funnel Section -->
     <section id="choose-your-path" class="dual-funnel">
         <div class="container">
             <div class="section-header">
@@ -110,23 +931,23 @@
                 <p>Choose the option that works best for you</p>
             </div>
             <div class="funnel-options">
-                <!-- LOCAL FUNNEL -->
+                <!-- LOCAL / TOURNAMENT FUNNEL -->
                 <div class="funnel-card local-card">
                     <div class="funnel-icon">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-baseball-ball"></i>
                     </div>
-                    <h3>Local to Myrtle Beach?</h3>
-                    <p class="funnel-description">Pick up at Hudson's Market or order for local pickup/delivery</p>
+                    <h3>In Myrtle Beach for a Tournament?</h3>
+                    <p class="funnel-description">Order ahead for easy pickup or local delivery during your tournament stay</p>
                     <ul class="funnel-benefits">
-                        <li><i class="fas fa-check-circle"></i> <strong>Lower local prices</strong></li>
-                        <li><i class="fas fa-check-circle"></i> No shipping fees</li>
-                        <li><i class="fas fa-check-circle"></i> Fresh pickup at local markets</li>
-                        <li><i class="fas fa-check-circle"></i> Same-day or next-day availability</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Tournament meal bundles available</strong></li>
+                        <li><i class="fas fa-check-circle"></i> Lower local prices — no shipping fees</li>
+                        <li><i class="fas fa-check-circle"></i> Order before you arrive</li>
+                        <li><i class="fas fa-check-circle"></i> Local delivery to condos &amp; resorts</li>
                     </ul>
-                    <a href="local.html" class="btn btn-primary btn-large">
-                        <i class="fas fa-shopping-basket"></i> View Local Menu & Order Info
+                    <a href="tournament-meals.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-baseball-ball"></i> View Tournament Meal Packs
                     </a>
-                    <p class="funnel-note">Serving Horry County & surrounding areas</p>
+                    <p class="funnel-note">Perfect for Ripken Experience families &amp; Myrtle Beach tournament stays</p>
                 </div>
 
                 <!-- NATIONWIDE FUNNEL -->
@@ -151,101 +972,163 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Tournament Pre-Order Inquiry Form -->
+    <section id="order" class="tournament-inquiry">
         <div class="container">
             <div class="section-header">
-                <h2>Why Jersey Jems?</h2>
-                <p>Because good food shouldn't be this hard to find in Myrtle Beach</p>
+                <h2>Order for Your Tournament Week</h2>
+                <p>Fill out this quick form and we'll contact you to confirm your order and pickup details</p>
             </div>
-            <div class="features-simple">
-                <div class="feature">
-                    <i class="fas fa-star"></i>
-                    <h4>Authentic Quality</h4>
-                    <p>From actual NY & NJ family kitchens, not factories</p>
+            <div class="inquiry-layout">
+                <div class="inquiry-info">
+                    <h3>We Make Tournament Week Easy</h3>
+                    <p>Just tell us when you're arriving, how many people you're feeding, and what meals you need. We'll put together your order and have everything ready when you get to Myrtle Beach.</p>
+                    <p>Large orders, team meals, and custom bundles are our specialty. Call us directly for same-day or time-sensitive requests.</p>
+                    <ul class="inquiry-contact-list">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:843-548-7730">843-548-7730 — Call or Text</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:hello@jerseyjemsmb.com">hello@jerseyjemsmb.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-facebook"></i>
+                            <a href="https://www.facebook.com/share/14H35yfvq22/?mibextid=wwXIfr" target="_blank" rel="noopener">Message us on Facebook</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram"></i>
+                            <a href="https://www.instagram.com/jerseyjemsmb" target="_blank" rel="noopener">@jerseyjemsmb on Instagram</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="feature">
-                    <i class="fas fa-calendar-check"></i>
-                    <h4>Easy Pickup</h4>
-                    <p>Order and pick up on scheduled days</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-clock"></i>
-                    <h4>Save Time</h4>
-                    <p>Restaurant-quality meals in 15 minutes</p>
+                <div class="inquiry-form-box">
+                    <h3>Tournament Pre-Order Request</h3>
+                    <form name="tournament-preorder" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+                        <input type="hidden" name="form-name" value="tournament-preorder">
+                        <p style="display:none;"><input name="bot-field"></p>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="fname">First Name *</label>
+                                <input type="text" id="fname" name="first-name" required placeholder="Your first name">
+                            </div>
+                            <div class="form-group">
+                                <label for="lname">Last Name *</label>
+                                <input type="text" id="lname" name="last-name" required placeholder="Your last name">
+                            </div>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(xxx) xxx-xxxx">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="arrival">Arrival / Tournament Week</label>
+                                <input type="text" id="arrival" name="arrival-date" placeholder="e.g. June 14–18">
+                            </div>
+                            <div class="form-group">
+                                <label for="lodging">Lodging Area</label>
+                                <input type="text" id="lodging" name="lodging-area" placeholder="e.g. Ocean Lakes, Myrtle Beach Resort">
+                            </div>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="groupsize">Family / Group Size</label>
+                                <select id="groupsize" name="group-size">
+                                    <option value="">Select size...</option>
+                                    <option value="2-4">2–4 people</option>
+                                    <option value="5-8">5–8 people</option>
+                                    <option value="9-15">9–15 (small team)</option>
+                                    <option value="16+">16+ (full team / multiple families)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="delivery">Pickup or Delivery?</label>
+                                <select id="delivery" name="pickup-delivery">
+                                    <option value="">Select...</option>
+                                    <option value="pickup">I'll pick up</option>
+                                    <option value="delivery">Delivery to my condo/resort</option>
+                                    <option value="either">Either works</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">What meals are you looking for? Any special requests?</label>
+                            <textarea id="notes" name="notes" rows="3" placeholder="e.g. Need pasta dinners for 3 nights, breakfasts for 5 days, and a dessert pack for after the championship game..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send My Order Request
+                        </button>
+                        <p class="form-note">We'll follow up by phone or email within a few hours to confirm your order. For faster response, call us directly at 843-548-7730.</p>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Clarity Section - NEW -->
-    <section id="pricing-info" class="pricing-clarity">
-        <div class="container">
-            <div class="pricing-clarity-content">
-                <div class="pricing-icon">
-                    <i class="fas fa-info-circle"></i>
-                </div>
-                <div class="pricing-text">
-                    <h3>Two Prices, One Great Product</h3>
-                    <p><strong>Local prices are lower</strong> because you pick up directly or we deliver locally. <strong>Nationwide prices are slightly higher</strong> to cover the cost of insulated packaging, dry ice, and 2-day express shipping to keep everything frozen solid.</p>
-                    <p class="pricing-subtext">Either way, you get the same authentic, high-quality Italian specialties from legendary Northeast family kitchens.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How to Order Section -->
-    <section id="how-to-order" class="how-to-order">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2>How to Order</h2>
-                <p>Simple, easy process - from menu to your table in 3 steps</p>
+                <h2>What Our Customers Say</h2>
+                <p>Hear from families who've brought Northeast flavors to their table</p>
             </div>
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">
-                        <i class="fas fa-list-ul"></i>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Best ravioli I've had since leaving Brooklyn! The Talluto's cheese ravioli tastes exactly like my grandmother used to make. Worth every penny."</p>
+                    <div class="testimonial-author">
+                        <strong>Maria R.</strong>
+                        <span>Myrtle Beach, SC</span>
                     </div>
-                    <h3>Browse Our Menu</h3>
-                    <p>Check out our selection of authentic Italian specialties from legendary Northeast brands</p>
-                    <a href="menu/" class="step-link">View Menu →</a>
                 </div>
-                
-                <div class="step-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <i class="fas fa-phone"></i>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Finally found authentic Italian sausage down South! The Martin's hot Italian is exactly what I remember from Philly. My Sunday gravy hasn't been the same since I moved here – until now!"</p>
+                    <div class="testimonial-author">
+                        <strong>John D.</strong>
+                        <span>Surfside Beach, SC</span>
                     </div>
-                    <h3>Call to Order</h3>
-                    <p><strong class="highlight-phone">843-548-7730</strong></p>
-                    <p>Tell us what you'd like and we'll confirm availability and pickup time</p>
                 </div>
-                
-                <div class="step-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <i class="fas fa-shopping-bag"></i>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The Isgro cookies brought me to tears — they taste EXACTLY like the ones from 9th Street in Philly. I order them for every family gathering now. My kids think I'm a hero!"</p>
+                    <div class="testimonial-author">
+                        <strong>Anthony M.</strong>
+                        <span>North Myrtle Beach, SC</span>
                     </div>
-                    <h3>Pick Up & Enjoy</h3>
-                    <p>Most orders ready within 2-3 days. We'll confirm pickup details and location</p>
-                    <p class="pickup-note">Payment accepted at pickup</p>
                 </div>
-            </div>
-            
-            <div class="order-cta">
-                <h3>Ready to Order?</h3>
-                <a href="tel:843-548-7730" class="btn btn-primary btn-large">
-                    <i class="fas fa-phone"></i> Call Now<br>843-548-7730
-                </a>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Easy pickup, fresh quality products, and reasonable prices. It's like having a piece of Jersey in my freezer. The gnocchi is outstanding!"</p>
+                    <div class="testimonial-author">
+                        <strong>Lisa K.</strong>
+                        <span>Murrells Inlet, SC</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"My husband is from Staten Island and he's VERY picky about Italian food. He said the Scaramuzza sauce is 'legit' — that's high praise! We order every week now."</p>
+                    <div class="testimonial-author">
+                        <strong>Jennifer T.</strong>
+                        <span>Conway, SC</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The lobster ravioli is INCREDIBLE. Yes, it's $23, but it's restaurant quality at home. My dinner guests thought I made it from scratch. I just smiled and said nothing!"</p>
+                    <div class="testimonial-author">
+                        <strong>Robert S.</strong>
+                        <span>Pawleys Island, SC</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -255,16 +1138,46 @@
         <div class="container">
             <div class="section-header">
                 <h2>Frequently Asked Questions</h2>
-                <p>Everything you need to know about ordering</p>
+                <p>Everything tournament families need to know about ordering</p>
             </div>
             <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-baseball-ball"></i>
+                        <h3>Can I order before I arrive in Myrtle Beach?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely — and we recommend it! Call or email ahead with your arrival date and what meals you need. We'll confirm your order and have everything ready when you get here. Just call 843-548-7730 or email hello@jerseyjemsmb.com.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-users"></i>
+                        <h3>Do you handle large team orders?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Team dinners, carb-load nights, and bulk pasta packs are all available. Just call us ahead of time so we can make sure we have everything in stock for your group size. We love feeding teams.</p>
+                    </div>
+                </div>
+                
                 <div class="faq-item">
                     <div class="faq-question">
                         <i class="fas fa-map-marker-alt"></i>
                         <h3>Where do I pick up my order?</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>We'll provide the exact pickup location when you place your order. It's in the Myrtle Beach area, easy to access from Highway 17.</p>
+                        <p>We'll provide the exact pickup location when you place your order. It's in the Myrtle Beach area, easy to access. We also have a booth at Hudson's Market every Thursday at 7000 N. Kings Highway.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-truck"></i>
+                        <h3>Can you deliver to my condo or resort?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer local delivery in Horry County. Call us to discuss delivery options and any fee that may apply based on your location. Great for families who want to stock up on arrival without making a detour.</p>
                     </div>
                 </div>
                 
@@ -274,7 +1187,17 @@
                         <h3>How far in advance do I need to order?</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>Most items are available with 2-3 days notice. For larger orders or special items, we recommend calling at least a week ahead.</p>
+                        <p>Most items are available with 2–3 days notice. For larger team orders or special requests, calling at least a week ahead is ideal. For tournament families, we recommend ordering before you leave home.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-fire"></i>
+                        <h3>How long does it take to cook?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most meals take 10–15 minutes to prepare. Fresh pasta cooks in 3–5 minutes, sauces heat in minutes, and sausage is quick in a skillet. We'll include prep notes with every order.</p>
                     </div>
                 </div>
                 
@@ -284,17 +1207,7 @@
                         <h3>What payment methods do you accept?</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>We accept cash, Venmo, Zelle, and all major credit cards at pickup.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-shopping-cart"></i>
-                        <h3>Is there a minimum order?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No minimum! Whether you want one package of ravioli or stocking up for a family gathering, we're happy to help.</p>
+                        <p>We accept cash, Venmo, Zelle, and all major credit cards at pickup. For team orders, we're happy to work out the payment method that's easiest for the group.</p>
                     </div>
                 </div>
                 
@@ -304,300 +1217,16 @@
                         <h3>How long do products stay frozen?</h3>
                     </div>
                     <div class="faq-answer">
-                        <p>All items are flash-frozen and will stay fresh in your freezer for 3-6 months. We'll provide specific storage instructions at pickup.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-truck"></i>
-                        <h3>Do you deliver?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! We offer <strong>local delivery</strong> in Horry County and <strong>nationwide shipping</strong> to all 50 states. <a href="local.html" style="color: var(--primary-color); text-decoration: underline;">Learn about local delivery</a> or <a href="nationwide.html" style="color: var(--primary-color); text-decoration: underline;">ship nationwide with 2-day express</a>.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-shipping-fast"></i>
-                        <h3>Can I order online and have it shipped?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely! Visit our <a href="nationwide.html" style="color: var(--primary-color); text-decoration: underline;">nationwide shipping page</a> to order online. We use professional insulated packaging and dry ice to ship frozen Italian specialties anywhere in the USA.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-balance-scale"></i>
-                        <h3>Why are prices different for local vs. shipped orders?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Local prices are lower because you pick up directly. Nationwide prices include the cost of insulated packaging, dry ice, and materials needed to keep everything frozen during 2-day shipping. Same great products, just different delivery methods!</p>
+                        <p>All items are flash-frozen and will stay fresh in your freezer for 3–6 months. Perfect for stocking a condo freezer on arrival and eating well all week. We'll include storage instructions with your order.</p>
                     </div>
                 </div>
             </div>
             
             <div class="faq-cta">
-                <p>Still have questions?</p>
+                <p>Still have questions? We'd love to help plan your tournament week meals.</p>
                 <a href="tel:843-548-7730" class="btn btn-secondary">
                     <i class="fas fa-phone"></i> Call Us: 843-548-7730
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Our Customers Say</h2>
-                <p>Hear from families who've brought Northeast flavors to their table</p>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Best ravioli I've had since leaving Brooklyn! The Tallutos cheese ravioli tastes exactly like my grandmother used to make. Worth every penny."</p>
-                    <div class="testimonial-author">
-                        <strong>Maria R.</strong>
-                        <span>Myrtle Beach, SC</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Finally found authentic Italian sausage down South! The Martin's hot Italian is exactly what I remember from Philly. My Sunday gravy hasn't been the same since I moved here - until now!"</p>
-                    <div class="testimonial-author">
-                        <strong>John D.</strong>
-                        <span>Surfside Beach, SC</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"The Isgro cookies brought me to tears - they taste EXACTLY like the ones from 9th Street in Philly. I order them for every family gathering now. My kids think I'm a hero!"</p>
-                    <div class="testimonial-author">
-                        <strong>Anthony M.</strong>
-                        <span>North Myrtle Beach, SC</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Easy pickup, fresh quality products, and reasonable prices. It's like having a piece of Jersey in my freezer. The gnocchi is outstanding!"</p>
-                    <div class="testimonial-author">
-                        <strong>Lisa K.</strong>
-                        <span>Murrells Inlet, SC</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"My husband is from Staten Island and he's VERY picky about Italian food. He said the Scaramuzza sauce is 'legit' - that's high praise! We order every week now."</p>
-                    <div class="testimonial-author">
-                        <strong>Jennifer T.</strong>
-                        <span>Conway, SC</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"The lobster ravioli is INCREDIBLE. Yes, it's $23, but it's restaurant quality at home. My dinner guests thought I made it from scratch. I just smiled and said nothing!"</p>
-                    <div class="testimonial-author">
-                        <strong>Robert S.</strong>
-                        <span>Pawleys Island, SC</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How to Order Section -->
-    <section id="how-to-order" class="how-to-order">
-        <div class="container">
-            <div class="section-header">
-                <h2>How to Order</h2>
-                <p>Simple, easy process - from menu to your table in 3 steps</p>
-            </div>
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">
-                        <i class="fas fa-list-ul"></i>
-                    </div>
-                    <h3>Browse Our Menu</h3>
-                    <p>Check out our selection of authentic Italian specialties from legendary Northeast brands</p>
-                    <a href="menu/" class="step-link">View Menu →</a>
-                </div>
-                
-                <div class="step-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Call to Order</h3>
-                    <p><strong class="highlight-phone">843-548-7730</strong></p>
-                    <p>Tell us what you'd like and we'll confirm availability and pickup time</p>
-                </div>
-                
-                <div class="step-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
-                    <h3>Pick Up & Enjoy</h3>
-                    <p>Most orders ready within 2-3 days. We'll confirm pickup details and location</p>
-                    <p class="pickup-note">Payment accepted at pickup</p>
-                </div>
-            </div>
-            
-            <div class="order-cta">
-                <h3>Ready to Order?</h3>
-                <a href="tel:843-548-7730" class="btn btn-primary btn-large">
-                    <i class="fas fa-phone"></i> Call Now<br>843-548-7730
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Everything you need to know about ordering</p>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Where do I pick up my order?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We'll provide the exact pickup location when you place your order. It's in the Myrtle Beach area, easy to access from Highway 17.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-clock"></i>
-                        <h3>How far in advance do I need to order?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Most items are available with 2-3 days notice. For larger orders or special items, we recommend calling at least a week ahead.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-dollar-sign"></i>
-                        <h3>What payment methods do you accept?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We accept cash, Venmo, Zelle, and all major credit cards at pickup.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-shopping-cart"></i>
-                        <h3>Is there a minimum order?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No minimum! Whether you want one package of ravioli or stocking up for a family gathering, we're happy to help.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-snowflake"></i>
-                        <h3>How long do products stay frozen?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>All items are flash-frozen and will stay fresh in your freezer for 3-6 months. We'll provide specific storage instructions at pickup.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-truck"></i>
-                        <h3>Do you deliver?</h3>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Currently we offer pickup only, but we're working on delivery options for the future. Call us to discuss special arrangements for large orders.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="faq-cta">
-                <p>Still have questions?</p>
-                <a href="tel:843-548-7730" class="btn btn-secondary">
-                    <i class="fas fa-phone"></i> Call Us<br>843-548-7730
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Our Customers Say</h2>
-                <p>Hear from families who've brought Northeast flavors to their table</p>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Best ravioli I've had since leaving Brooklyn! The Tallutos cheese ravioli tastes exactly like my grandmother used to make. Worth every penny."</p>
-                    <div class="testimonial-author">
-                        <strong>Maria R.</strong>
-                        <span>Myrtle Beach, SC</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Finally found authentic Italian sausage down South! The Martin's hot Italian is exactly what I remember from Philly. My Sunday gravy hasn't been the same since I moved here - until now!"</p>
-                    <div class="testimonial-author">
-                        <strong>John D.</strong>
-                        <span>Surfside Beach, SC</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"The Isgro cookies brought me to tears - they taste EXACTLY like the ones from 9th Street in Philly. I order them for every family gathering now. My kids think I'm a hero!"</p>
-                    <div class="testimonial-author">
-                        <strong>Anthony M.</strong>
-                        <span>North Myrtle Beach, SC</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Easy pickup, fresh quality products, and reasonable prices. It's like having a piece of Jersey in my freezer. The gnocchi is outstanding!"</p>
-                    <div class="testimonial-author">
-                        <strong>Lisa K.</strong>
-                        <span>Murrells Inlet, SC</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"My husband is from Staten Island and he's VERY picky about Italian food. He said the Scaramuzza sauce is 'legit' - that's high praise! We order every week now."</p>
-                    <div class="testimonial-author">
-                        <strong>Jennifer T.</strong>
-                        <span>Conway, SC</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"The lobster ravioli is INCREDIBLE. Yes, it's $23, but it's restaurant quality at home. My dinner guests thought I made it from scratch. I just smiled and said nothing!"</p>
-                    <div class="testimonial-author">
-                        <strong>Robert S.</strong>
-                        <span>Pawleys Island, SC</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -607,40 +1236,38 @@
         <div class="container">
             <div class="section-header">
                 <h2>Get in Touch</h2>
-                <p>We'd love to hear from you</p>
+                <p>Questions about tournament meals, team orders, or delivery? We're here to help.</p>
             </div>
             <div class="contact-simple">
-                <div class="order-info" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                <div class="order-info" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
                     <div class="contact-card" style="text-align: center; padding: 2rem;">
                         <i class="fas fa-phone fa-2x" style="color: #2E86AB; margin-bottom: 1rem;"></i>
-                        <h3 style="margin-bottom: 0.5rem; font-size: 1.3rem;">Phone</h3>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.3rem;">Phone / Text</h3>
                         <p style="font-size: 1.2rem; font-weight: 600; color: var(--text-dark);">843-548-7730</p>
-                        <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.95rem;">Call for orders and inquiries</p>
+                        <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.95rem;">Fastest way to place a tournament order</p>
                     </div>
                     <div class="contact-card" style="text-align: center; padding: 2rem;">
                         <i class="fas fa-envelope fa-2x" style="color: #2E86AB; margin-bottom: 1rem;"></i>
                         <h3 style="margin-bottom: 0.5rem; font-size: 1.3rem;">Email</h3>
-                        <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-dark);">hello@jerseyjemsmb.com</p>
-                        <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.95rem;">Send us your questions</p>
+                        <p style="font-size: 1rem; font-weight: 600; color: var(--text-dark);">hello@jerseyjemsmb.com</p>
+                        <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.95rem;">Great for advance orders &amp; custom requests</p>
                     </div>
                     <div class="contact-card" style="text-align: center; padding: 2rem;">
                         <i class="fab fa-facebook fa-2x" style="color: #2E86AB; margin-bottom: 1rem;"></i>
                         <h3 style="margin-bottom: 0.5rem; font-size: 1.3rem;">Facebook</h3>
-                        <a href="https://www.facebook.com/share/14H35yfvq22/?mibextid=wwXIfr" target="_blank" style="font-size: 1.1rem; font-weight: 600; color: #2E86AB; text-decoration: none;">@jerseyjemsmb</a>
-                        <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.95rem;">Follow us on Facebook</p>
+                        <a href="https://www.facebook.com/share/14H35yfvq22/?mibextid=wwXIfr" target="_blank" style="font-size: 1rem; font-weight: 600; color: #2E86AB; text-decoration: none;">@jerseyjemsmb</a>
+                        <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.95rem;">DM us for orders &amp; questions</p>
                     </div>
                     <div class="contact-card" style="text-align: center; padding: 2rem;">
                         <i class="fab fa-instagram fa-2x" style="color: #2E86AB; margin-bottom: 1rem;"></i>
                         <h3 style="margin-bottom: 0.5rem; font-size: 1.3rem;">Instagram</h3>
-                        <a href="https://www.instagram.com/jerseyjemsmb" target="_blank" style="font-size: 1.1rem; font-weight: 600; color: #2E86AB; text-decoration: none;">@jerseyjemsmb</a>
-                        <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.95rem;">See our latest updates</p>
+                        <a href="https://www.instagram.com/jerseyjemsmb" target="_blank" style="font-size: 1rem; font-weight: 600; color: #2E86AB; text-decoration: none;">@jerseyjemsmb</a>
+                        <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.95rem;">See our latest updates &amp; specials</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
 
     <!-- Footer -->
     <footer class="footer">
@@ -651,15 +1278,17 @@
                         <img src="https://page.gensparksite.com/v1/base64_upload/24a0133849be5cd3312001c2bccfadbe" alt="Jersey Jems Logo" class="logo">
                         <h3>Jersey Jems</h3>
                     </div>
-                    <p>Quality comfort food from New York and New Jersey – perfect for Sunday dinners, family gatherings, and memorable meals by the coast.</p>
+                    <p>Ready-to-go pasta dinners, breakfast packs &amp; team meal bundles for Myrtle Beach baseball families. Authentic Northeast Italian food — easy meals for your tournament week.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
+                        <li><a href="tournament-meals.html">Tournament Meals</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="menu/">Menu</a></li>
-                        <li><a href="#how-to-order">How to Order</a></li>
+                        <li><a href="menu/">Menu &amp; Prices</a></li>
+                        <li><a href="local.html">Local Orders</a></li>
+                        <li><a href="nationwide.html">Ship Nationwide</a></li>
                         <li><a href="#faq">FAQ</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -669,12 +1298,12 @@
                     <p><i class="fas fa-phone"></i> 843-548-7730</p>
                     <p><i class="fas fa-envelope"></i> hello@jerseyjemsmb.com</p>
                     <p><i class="fas fa-map-marker-alt"></i> Myrtle Beach, SC</p>
-                    <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/share/14H35yfvq22/?mibextid=wwXIfr" target="_blank" style="color: inherit; text-decoration: none;">Facebook: @jerseyjemsmb</a></p>
-                    <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/jerseyjemsmb" target="_blank" style="color: inherit; text-decoration: none;">Instagram: @jerseyjemsmb</a></p>
+                    <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/share/14H35yfvq22/?mibextid=wwXIfr" target="_blank" style="color: inherit; text-decoration: none;">@jerseyjemsmb</a></p>
+                    <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/jerseyjemsmb" target="_blank" style="color: inherit; text-decoration: none;">@jerseyjemsmb</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Jersey Jems. All rights reserved. | Bringing New York, New Jersey & Philadelphia flavors to Myrtle Beach</p>
+                <p>&copy; 2025 Jersey Jems. All rights reserved. | Tournament Meals for Myrtle Beach Baseball Families | Authentic NY, NJ &amp; Philly Flavors</p>
             </div>
         </div>
     </footer>

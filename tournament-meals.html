@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Meals for Myrtle Beach Baseball Families | Jersey Jems</title>
+    <meta name="description" content="Jersey Jems is the go-to meal solution for baseball families visiting Myrtle Beach for tournaments. Ready-to-go pasta dinners, breakfast packs, and team meal bundles. Perfect for families at the Ripken Experience and nearby tournaments. Order ahead, pick up fast, eat well all week.">
+    <meta name="keywords" content="tournament meals Myrtle Beach, Ripken Experience Myrtle Beach meals, baseball families Myrtle Beach, family meals for Myrtle Beach tournaments, team meals Myrtle Beach, ready-to-go meals Myrtle Beach, pasta dinner Myrtle Beach, Myrtle Beach baseball tournament food, condo meals Myrtle Beach tournament, team carb load Myrtle Beach">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jerseyjems.com/tournament-meals">
+    <meta property="og:title" content="Tournament Meals for Myrtle Beach Baseball Families | Jersey Jems">
+    <meta property="og:description" content="Easy pasta dinners, breakfast packs & team bundles for Myrtle Beach baseball families. Order before you arrive, pick up fast, eat well all week. Perfect for Ripken Experience families.">
+    <meta property="og:site_name" content="Jersey Jems">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tournament Meals for Myrtle Beach Baseball Families | Jersey Jems">
+    <meta name="twitter:description" content="Ready-to-go pasta dinners, breakfast packs & team bundles. Order ahead for your Myrtle Beach baseball tournament week.">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://jerseyjems.com/tournament-meals">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='30' fill='%23D2691E'>JJ</text></svg>">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ================================================
+           TOURNAMENT PAGE HERO
+        ================================================ */
+        .tournament-hero {
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg,
+                rgba(26, 82, 118, 0.92) 0%,
+                rgba(21, 67, 96, 0.88) 100%
+            ),
+            url('https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=1920&h=1080&fit=crop&crop=center') center/cover;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: var(--white);
+            padding-top: 80px;
+        }
+        .tournament-hero::before {
+            content: '⚾';
+            position: absolute;
+            font-size: 30rem;
+            opacity: 0.03;
+            right: -80px;
+            top: 50%;
+            transform: translateY(-50%);
+            line-height: 1;
+            pointer-events: none;
+        }
+        .tournament-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 860px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(243,156,18,0.9);
+            color: #2C1810;
+            font-weight: 700;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 7px 18px;
+            border-radius: 50px;
+            margin-bottom: 22px;
+        }
+        .tournament-hero h1 {
+            font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+            margin-bottom: 22px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+            line-height: 1.15;
+        }
+        .tournament-hero h1 span {
+            color: #F39C12;
+        }
+        .tournament-hero .hero-intro {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            color: rgba(255,255,255,0.92);
+            line-height: 1.7;
+            margin-bottom: 35px;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .hero-proof-bar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 20px 0 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        .hero-proof-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.88);
+        }
+        .hero-proof-item i {
+            color: #F39C12;
+        }
+
+        /* ================================================
+           WHO IS THIS FOR
+        ================================================ */
+        .who-its-for {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        .who-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 24px;
+        }
+        .who-card {
+            background: var(--light-bg);
+            border-radius: 16px;
+            padding: 30px 24px;
+            border-left: 5px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        .who-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+            background: var(--white);
+        }
+        .who-card .who-emoji {
+            font-size: 2.4rem;
+            display: block;
+            margin-bottom: 14px;
+        }
+        .who-card h3 {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .who-card p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ================================================
+           RIPKEN HIGHLIGHT
+        ================================================ */
+        .ripken-section {
+            padding: 70px 0;
+            background: linear-gradient(135deg, #1a5276, #154360);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .ripken-section::after {
+            content: '⚾';
+            position: absolute;
+            font-size: 18rem;
+            opacity: 0.05;
+            bottom: -40px;
+            left: -30px;
+            line-height: 1;
+            pointer-events: none;
+        }
+        .ripken-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .ripken-text h2 {
+            color: var(--white);
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 20px;
+        }
+        .ripken-text h2 span {
+            color: #F39C12;
+        }
+        .ripken-text p {
+            color: rgba(255,255,255,0.88);
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+        .ripken-checklist {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+        .ripken-checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: rgba(255,255,255,0.9);
+            font-size: 0.98rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .ripken-checklist li i {
+            color: #F39C12;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        .ripken-callout {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(243,156,18,0.6);
+            border-radius: 20px;
+            padding: 40px 35px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        .ripken-callout h3 {
+            color: #F39C12;
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+        .ripken-callout p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 24px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .ripken-layout { grid-template-columns: 1fr; gap: 40px; }
+        }
+
+        /* ================================================
+           WEEK-BY-MEAL PLANNER
+        ================================================ */
+        .meal-planner {
+            padding: 80px 0;
+            background: var(--background-cream);
+        }
+        .planner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .planner-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s ease;
+        }
+        .planner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+        .planner-card-header {
+            padding: 20px 24px 16px;
+            color: var(--white);
+        }
+        .planner-card-header.arrival { background: linear-gradient(135deg, #1a5276, #2E86AB); }
+        .planner-card-header.gameday { background: linear-gradient(135deg, #117a65, #1abc9c); }
+        .planner-card-header.midweek { background: linear-gradient(135deg, #6c3483, #9b59b6); }
+        .planner-card-header.team { background: linear-gradient(135deg, #784212, #ca6f1e); }
+        .planner-card-header.celebrate { background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); }
+        .planner-card-header .pc-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .planner-card-header h3 {
+            font-size: 1.1rem;
+            color: var(--white);
+            margin: 0;
+        }
+        .planner-card-header .pc-when {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.8);
+            margin: 4px 0 0;
+        }
+        .planner-card-body {
+            padding: 20px 24px 24px;
+        }
+        .planner-card-body p {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin-bottom: 14px;
+            line-height: 1.5;
+        }
+        .planner-items {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 16px 0;
+        }
+        .planner-items li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+        .planner-items li i {
+            color: var(--primary-color);
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        /* ================================================
+           BUNDLE CARDS (reused from index, lighter version)
+        ================================================ */
+        .bundles-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        .bundle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+        }
+        .tm-bundle-card {
+            background: var(--light-bg);
+            border-radius: 18px;
+            padding: 30px 26px;
+            border-top: 5px solid var(--primary-color);
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .tm-bundle-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-medium);
+            background: var(--white);
+        }
+        .tm-bundle-card.top { border-top-color: #F39C12; }
+        .tm-bundle-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 14px;
+            align-self: flex-start;
+        }
+        .tm-bundle-badge.gold { background: linear-gradient(135deg, #E67E22, #F39C12); }
+        .tm-bundle-card h3 {
+            font-size: 1.25rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .tm-bundle-desc {
+            font-size: 0.93rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+        .tm-bundle-items {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 16px 0;
+        }
+        .tm-bundle-items li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+        .tm-bundle-items li i {
+            color: #27AE60;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        .tm-bundle-for {
+            font-size: 0.84rem;
+            background: var(--cream);
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+        .tm-bundle-for strong { color: var(--text-dark); }
+        .tm-bundle-price {
+            font-size: 0.88rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .tm-bundle-card .btn { margin-top: auto; }
+
+        /* ================================================
+           HOW TO ORDER - TOURNAMENT
+        ================================================ */
+        .tm-how-to-order {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--background-cream), var(--light-bg));
+        }
+
+        /* ================================================
+           INQUIRY FORM SECTION
+        ================================================ */
+        .tm-inquiry {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a5276, #154360);
+            color: var(--white);
+        }
+        .tm-inquiry .section-header h2 { color: var(--white); }
+        .tm-inquiry .section-header h2::after {
+            background: linear-gradient(90deg, #F39C12, #E67E22);
+        }
+        .tm-inquiry .section-header p { color: rgba(255,255,255,0.85); }
+        .inquiry-2col {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 60px;
+            align-items: start;
+        }
+        .inquiry-sidebar h3 {
+            color: var(--white);
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+        }
+        .inquiry-sidebar p {
+            color: rgba(255,255,255,0.85);
+            line-height: 1.7;
+            font-size: 0.98rem;
+            margin-bottom: 14px;
+        }
+        .inquiry-contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+        }
+        .inquiry-contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            margin-bottom: 14px;
+            font-weight: 500;
+        }
+        .inquiry-contact-list li i {
+            color: #F39C12;
+            font-size: 1.1rem;
+            width: 20px;
+        }
+        .inquiry-contact-list li a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+        }
+        .inquiry-contact-list li a:hover {
+            color: #F39C12;
+            text-decoration: underline;
+        }
+        .inquiry-form-box {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 42px 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+        }
+        .inquiry-form-box h3 {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.87rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e1e8ed;
+            border-radius: 10px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            background: var(--light-bg);
+            transition: all 0.3s ease;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: var(--white);
+            box-shadow: 0 0 0 3px rgba(192,57,43,0.1);
+        }
+        .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .form-submit-btn {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 8px;
+        }
+        .form-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(192,57,43,0.35);
+        }
+        .form-note {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .inquiry-2col { grid-template-columns: 1fr; gap: 40px; }
+            .inquiry-form-box { padding: 28px 20px; }
+            .form-row-2 { grid-template-columns: 1fr; }
+        }
+
+        /* ================================================
+           FAQ SECTION (tournament-specific)
+        ================================================ */
+        .tm-faq {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        /* ================================================
+           FINAL CTA
+        ================================================ */
+        .tm-final-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            text-align: center;
+            color: var(--white);
+        }
+        .tm-final-cta h2 {
+            color: var(--white);
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            margin-bottom: 16px;
+        }
+        .tm-final-cta p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 35px;
+            line-height: 1.6;
+        }
+        .tm-cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .tm-final-cta .btn-white {
+            background: var(--white);
+            color: var(--primary-color);
+            border: 2px solid var(--white);
+            font-weight: 700;
+        }
+        .tm-final-cta .btn-white:hover {
+            background: transparent;
+            color: var(--white);
+        }
+        .tm-final-cta .btn-outline-white {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.7);
+            font-weight: 600;
+        }
+        .tm-final-cta .btn-outline-white:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: var(--white);
+        }
+
+        /* ================================================
+           NAV ACTIVE
+        ================================================ */
+        .nav-link.tournament-nav {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white) !important;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        .nav-link.tournament-nav:hover { opacity: 0.88; transform: translateY(-1px); }
+        .nav-link.tournament-nav::after { display: none; }
+        .nav-link.tournament-nav.active {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+        }
+
+        /* ================================================
+           MOBILE
+        ================================================ */
+        @media (max-width: 768px) {
+            .tournament-hero-content { padding: 40px 16px 50px; }
+            .hero-proof-bar { gap: 16px; }
+            .who-grid { grid-template-columns: 1fr 1fr; }
+            .planner-grid { grid-template-columns: 1fr; }
+            .bundle-grid { grid-template-columns: 1fr; }
+            .tm-cta-buttons { flex-direction: column; align-items: center; }
+        }
+        @media (max-width: 480px) {
+            .who-grid { grid-template-columns: 1fr; }
+            .hero-cta-group { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="https://page.gensparksite.com/v1/base64_upload/24a0133849be5cd3312001c2bccfadbe" alt="Jersey Jems Logo" class="logo">
+                <h1>Jersey Jems</h1>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="tournament-meals.html" class="nav-link tournament-nav active"><i class="fas fa-baseball-ball"></i> Tournament Meals</a></li>
+                <li><a href="local.html" class="nav-link"><i class="fas fa-map-marker-alt"></i> Local</a></li>
+                <li><a href="nationwide.html" class="nav-link"><i class="fas fa-shipping-fast"></i> Ship Nationwide</a></li>
+                <li><a href="menu/" class="nav-link">Menu</a></li>
+                <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="tournament-hero">
+        <div class="container">
+            <div class="tournament-hero-content">
+                <div class="hero-eyebrow">
+                    <i class="fas fa-baseball-ball"></i>
+                    Myrtle Beach Baseball Families
+                </div>
+                <h1>Tournament-Week Meals<br><span>Made Simple</span></h1>
+                <p class="hero-intro">
+                    You've got games to get to, kids to manage, and a schedule that doesn't slow down. Jersey Jems takes dinner off your worry list. Authentic pasta, sausage, breakfast packs, and dessert bundles — order before you arrive, pick up fast, and eat well all week.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#inquiry-form" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-alt"></i> Pre-Order for My Trip
+                    </a>
+                    <a href="tel:843-548-7730" class="btn" style="background: rgba(255,255,255,0.15); color: var(--white); border: 2px solid rgba(255,255,255,0.6); font-weight: 600; padding: 15px 30px; font-size: 1.1rem; border-radius: 50px;">
+                        <i class="fas fa-phone"></i> Call 843-548-7730
+                    </a>
+                </div>
+                <div class="hero-proof-bar">
+                    <div class="hero-proof-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Ready in 10–15 min</span>
+                    </div>
+                    <div class="hero-proof-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Order before you arrive</span>
+                    </div>
+                    <div class="hero-proof-item">
+                        <i class="fas fa-home"></i>
+                        <span>Condo &amp; villa friendly</span>
+                    </div>
+                    <div class="hero-proof-item">
+                        <i class="fas fa-users"></i>
+                        <span>Teams welcome</span>
+                    </div>
+                    <div class="hero-proof-item">
+                        <i class="fas fa-truck"></i>
+                        <span>Local delivery available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Is This For -->
+    <section class="who-its-for">
+        <div class="container">
+            <div class="section-header">
+                <h2>Made for Myrtle Beach Tournament Families</h2>
+                <p>If any of this sounds like your trip, Jersey Jems is your meal solution</p>
+            </div>
+            <div class="who-grid">
+                <div class="who-card">
+                    <span class="who-emoji">⚾</span>
+                    <h3>Families at the Ripken Experience</h3>
+                    <p>Visiting Cal Ripken Sr. Complex for a tournament? Stock up on arrival, eat real food every night, and skip the restaurant scramble between games.</p>
+                </div>
+                <div class="who-card">
+                    <span class="who-emoji">🏨</span>
+                    <h3>Condo &amp; Villa Renters</h3>
+                    <p>Have a kitchen in your unit? Perfect. Order your meals before you leave home, pick them up on arrival day, and eat like you never left your kitchen.</p>
+                </div>
+                <div class="who-card">
+                    <span class="who-emoji">🧢</span>
+                    <h3>Coaches &amp; Team Parents</h3>
+                    <p>Organizing a team carb-load night? Need a batch order for 15 players? We handle large orders — just call ahead and we'll have it ready.</p>
+                </div>
+                <div class="who-card">
+                    <span class="who-emoji">👨‍👩‍👧</span>
+                    <h3>Families Staying a Full Week</h3>
+                    <p>Stock the freezer on arrival day. Between the games, the beach, and the chaos, you'll thank yourself for having easy dinner options every night.</p>
+                </div>
+                <div class="who-card">
+                    <span class="who-emoji">🌅</span>
+                    <h3>Parents with Early Game Starts</h3>
+                    <p>Bagels, breakfast sausage, and pastries from real NY/NJ bakeries. Quick and easy before the 8am start — no drive-thru needed.</p>
+                </div>
+                <div class="who-card">
+                    <span class="who-emoji">🎉</span>
+                    <h3>Teams That Want to Celebrate</h3>
+                    <p>Win the bracket? Celebrate with a dessert pack of authentic Isgro cookies, cheesecakes, and pastries from Philly. The kids will love it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ripken Experience Highlight -->
+    <section class="ripken-section">
+        <div class="container">
+            <div class="ripken-layout">
+                <div class="ripken-text">
+                    <h2>Playing at the <span>Ripken Experience</span> in Myrtle Beach?</h2>
+                    <p>The Cal Ripken Sr. Complex is one of the premier youth baseball destinations in the country, bringing thousands of families to Myrtle Beach every season. Tournament week is exciting — and exhausting.</p>
+                    <p>After a long day of games, the last thing you want is to figure out dinner for a hungry family or tired team. That's where Jersey Jems comes in.</p>
+                    <ul class="ripken-checklist">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Order before you leave home — everything ready when you check in
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Easy pickup near the tournament area or local delivery to your resort
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Pasta dinners, carb-load nights, breakfasts, and celebration desserts
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Authentic Northeast Italian food that's actually worth eating
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Ready in 10–15 minutes — even after a double-header day
+                        </li>
+                    </ul>
+                </div>
+                <div class="ripken-callout">
+                    <h3>Order Before Your Tournament</h3>
+                    <p>Call or email us before you travel. Tell us your arrival date, how many people you're feeding, and what meals you need. We'll have your order ready.</p>
+                    <a href="tel:843-548-7730" class="btn btn-primary btn-large" style="width: 100%; margin-bottom: 14px;">
+                        <i class="fas fa-phone"></i> Call 843-548-7730
+                    </a>
+                    <a href="mailto:hello@jerseyjemsmb.com" class="btn" style="width: 100%; background: rgba(255,255,255,0.15); color: var(--white); border: 2px solid rgba(255,255,255,0.5); font-weight: 600; padding: 14px 24px; border-radius: 50px; font-size: 0.95rem; text-align: center; display: block;">
+                        <i class="fas fa-envelope"></i> hello@jerseyjemsmb.com
+                    </a>
+                    <p style="margin-top: 16px; font-size: 0.85rem; color: rgba(255,255,255,0.7);">Serving Myrtle Beach baseball families for tournament season</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Week Meal Planner -->
+    <section class="meal-planner">
+        <div class="container">
+            <div class="section-header">
+                <h2>Plan Your Tournament Week Meals</h2>
+                <p>A simple guide to what works best for each day of your trip</p>
+            </div>
+            <div class="planner-grid">
+
+                <div class="planner-card">
+                    <div class="planner-card-header arrival">
+                        <span class="pc-icon">🛬</span>
+                        <h3>Arrival Night</h3>
+                        <p class="pc-when">Night 1 — after checking in</p>
+                    </div>
+                    <div class="planner-card-body">
+                        <p>You've been driving for hours. The last thing you want is to search for an open restaurant. Have dinner ready to go.</p>
+                        <ul class="planner-items">
+                            <li><i class="fas fa-circle"></i> Talluto's Cheese Ravioli</li>
+                            <li><i class="fas fa-circle"></i> Scaramuzza Sauce (quart)</li>
+                            <li><i class="fas fa-circle"></i> Italian Sausage on the side</li>
+                            <li><i class="fas fa-circle"></i> Dinner rolls — warm &amp; ready</li>
+                        </ul>
+                        <strong style="font-size: 0.88rem; color: var(--primary-color);">→ Try the Arrival Night Pasta Pack</strong>
+                    </div>
+                </div>
+
+                <div class="planner-card">
+                    <div class="planner-card-header gameday">
+                        <span class="pc-icon">☀️</span>
+                        <h3>Game-Day Morning</h3>
+                        <p class="pc-when">Early start — fuel the players</p>
+                    </div>
+                    <div class="planner-card-body">
+                        <p>8am first pitch means 6:30am wake-up. Grab-and-go breakfast that's actually filling.</p>
+                        <ul class="planner-items">
+                            <li><i class="fas fa-circle"></i> NY-style bagels (plain or raisin)</li>
+                            <li><i class="fas fa-circle"></i> Breakfast sausage links</li>
+                            <li><i class="fas fa-circle"></i> Bauli vanilla croissants</li>
+                            <li><i class="fas fa-circle"></i> Protein before the game</li>
+                        </ul>
+                        <strong style="font-size: 0.88rem; color: var(--primary-color);">→ Try the Game-Day Breakfast Pack</strong>
+                    </div>
+                </div>
+
+                <div class="planner-card">
+                    <div class="planner-card-header midweek">
+                        <span class="pc-icon">🏋️</span>
+                        <h3>Carb-Load Night</h3>
+                        <p class="pc-when">Night before the big game</p>
+                    </div>
+                    <div class="planner-card-body">
+                        <p>The night before championship bracket play, you want a real Italian carb dinner — not takeout pizza.</p>
+                        <ul class="planner-items">
+                            <li><i class="fas fa-circle"></i> DiMartino spaghetti or ziti</li>
+                            <li><i class="fas fa-circle"></i> Scaramuzza cheese cavatelli</li>
+                            <li><i class="fas fa-circle"></i> Sunday sauce (quart)</li>
+                            <li><i class="fas fa-circle"></i> Garlic bread or Kaiser rolls</li>
+                        </ul>
+                        <strong style="font-size: 0.88rem; color: var(--primary-color);">→ Try the Team Carb-Load Pack</strong>
+                    </div>
+                </div>
+
+                <div class="planner-card">
+                    <div class="planner-card-header team">
+                        <span class="pc-icon">🍝</span>
+                        <h3>Team Dinner</h3>
+                        <p class="pc-when">Coach-organized group meal</p>
+                    </div>
+                    <div class="planner-card-body">
+                        <p>Feeding 10 to 20 players at once? Skip the restaurant logistics. We supply the pasta, you supply the kitchen.</p>
+                        <ul class="planner-items">
+                            <li><i class="fas fa-circle"></i> Spaghetti + cavatelli in bulk</li>
+                            <li><i class="fas fa-circle"></i> Multiple sauce quarts</li>
+                            <li><i class="fas fa-circle"></i> Sausage packs for the team</li>
+                            <li><i class="fas fa-circle"></i> Rolls for everyone</li>
+                        </ul>
+                        <strong style="font-size: 0.88rem; color: var(--primary-color);">→ Call for team pricing</strong>
+                    </div>
+                </div>
+
+                <div class="planner-card">
+                    <div class="planner-card-header celebrate">
+                        <span class="pc-icon">🏆</span>
+                        <h3>Win Night Celebration</h3>
+                        <p class="pc-when">After a tournament victory</p>
+                    </div>
+                    <div class="planner-card-body">
+                        <p>They earned it. Celebrate with something special from a legendary Philly bakery — kids and adults love it.</p>
+                        <ul class="planner-items">
+                            <li><i class="fas fa-circle"></i> Isgro assorted Italian cookies</li>
+                            <li><i class="fas fa-circle"></i> Isgro cheesecakes (3-inch)</li>
+                            <li><i class="fas fa-circle"></i> Limoncello or Rum Squares</li>
+                            <li><i class="fas fa-circle"></i> Bauli croissants for dessert</li>
+                        </ul>
+                        <strong style="font-size: 0.88rem; color: var(--primary-color);">→ Try the Win Night Dessert Pack</strong>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Bundles Section -->
+    <section class="bundles-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tournament Meal Bundles</h2>
+                <p>Pre-built combinations designed around how baseball families actually eat during tournament week</p>
+            </div>
+            <div class="bundle-grid">
+
+                <div class="tm-bundle-card top">
+                    <span class="tm-bundle-badge gold">⭐ Most Popular</span>
+                    <h3>Arrival Night Pasta Pack</h3>
+                    <p class="tm-bundle-desc">The perfect first night — dinner ready in 15 minutes</p>
+                    <ul class="tm-bundle-items">
+                        <li><i class="fas fa-check-circle"></i> Scaramuzza Jumbo Ravioli</li>
+                        <li><i class="fas fa-check-circle"></i> Talluto's Cheese Ravioli</li>
+                        <li><i class="fas fa-check-circle"></i> Scaramuzza Sunday Sauce (32 oz)</li>
+                        <li><i class="fas fa-check-circle"></i> Dinner Rolls 12-pack</li>
+                    </ul>
+                    <div class="tm-bundle-for"><strong>Best for:</strong> Family of 4–6, arrival night, condo stay</div>
+                    <div class="tm-bundle-price">From ~$34 &nbsp;|&nbsp; Call for exact pricing</div>
+                    <a href="tel:843-548-7730" class="btn btn-primary"><i class="fas fa-phone"></i> Call to Order</a>
+                </div>
+
+                <div class="tm-bundle-card">
+                    <span class="tm-bundle-badge">Game Day</span>
+                    <h3>Game-Day Breakfast Pack</h3>
+                    <p class="tm-bundle-desc">Quick, filling, real food — before the 8am first pitch</p>
+                    <ul class="tm-bundle-items">
+                        <li><i class="fas fa-check-circle"></i> NY-Style Plain Bagels 6-pack</li>
+                        <li><i class="fas fa-check-circle"></i> Raisin Bagels 6-pack</li>
+                        <li><i class="fas fa-check-circle"></i> Martin's Breakfast Sausage Links</li>
+                        <li><i class="fas fa-check-circle"></i> Bauli Vanilla Croissants</li>
+                    </ul>
+                    <div class="tm-bundle-for"><strong>Best for:</strong> Family of 4+, early start days, player fuel</div>
+                    <div class="tm-bundle-price">From ~$29 &nbsp;|&nbsp; Call for exact pricing</div>
+                    <a href="tel:843-548-7730" class="btn btn-primary"><i class="fas fa-phone"></i> Call to Order</a>
+                </div>
+
+                <div class="tm-bundle-card">
+                    <span class="tm-bundle-badge">Team Meal</span>
+                    <h3>Team Carb-Load Dinner Pack</h3>
+                    <p class="tm-bundle-desc">Feed the full roster the night before big bracket games</p>
+                    <ul class="tm-bundle-items">
+                        <li><i class="fas fa-check-circle"></i> DiMartino Spaghetti (2–3 pkgs)</li>
+                        <li><i class="fas fa-check-circle"></i> Scaramuzza Cheese Cavatelli (2 pkgs)</li>
+                        <li><i class="fas fa-check-circle"></i> Sunday Sauce — Quart (2 jars)</li>
+                        <li><i class="fas fa-check-circle"></i> Martin's Italian Sausage (2 pkgs)</li>
+                        <li><i class="fas fa-check-circle"></i> Kaiser Rolls 6-pack</li>
+                    </ul>
+                    <div class="tm-bundle-for"><strong>Best for:</strong> Teams of 10–15, coach-run team dinner</div>
+                    <div class="tm-bundle-price">Custom team pricing — call for details</div>
+                    <a href="tel:843-548-7730" class="btn btn-primary"><i class="fas fa-phone"></i> Call for Team Pricing</a>
+                </div>
+
+                <div class="tm-bundle-card">
+                    <span class="tm-bundle-badge">Full Week</span>
+                    <h3>Condo Week Starter Pack</h3>
+                    <p class="tm-bundle-desc">Stock the freezer on day one, eat well all week</p>
+                    <ul class="tm-bundle-items">
+                        <li><i class="fas fa-check-circle"></i> Talluto's Cheese Ravioli</li>
+                        <li><i class="fas fa-check-circle"></i> Scaramuzza Potato Gnocchi</li>
+                        <li><i class="fas fa-check-circle"></i> Martin's Mild Italian Sausage</li>
+                        <li><i class="fas fa-check-circle"></i> Sauce Pint + Quart</li>
+                        <li><i class="fas fa-check-circle"></i> Bagels 6-pack + Dinner Rolls</li>
+                    </ul>
+                    <div class="tm-bundle-for"><strong>Best for:</strong> Week-long condo/villa rental, family of 4–5</div>
+                    <div class="tm-bundle-price">From ~$60 &nbsp;|&nbsp; Call for exact pricing</div>
+                    <a href="tel:843-548-7730" class="btn btn-primary"><i class="fas fa-phone"></i> Call to Order</a>
+                </div>
+
+                <div class="tm-bundle-card">
+                    <span class="tm-bundle-badge">Celebrate</span>
+                    <h3>Win Night Dessert Pack</h3>
+                    <p class="tm-bundle-desc">Authentic Philly pastries for when your team earns it</p>
+                    <ul class="tm-bundle-items">
+                        <li><i class="fas fa-check-circle"></i> Isgro Assorted Italian Cookies (lb)</li>
+                        <li><i class="fas fa-check-circle"></i> Isgro Cheesecake 3-inch (2–3 pcs)</li>
+                        <li><i class="fas fa-check-circle"></i> Isgro Rum Square or Limoncello</li>
+                        <li><i class="fas fa-check-circle"></i> Bauli Vanilla Croissants</li>
+                    </ul>
+                    <div class="tm-bundle-for"><strong>Best for:</strong> Win celebrations, team treats, post-game dessert</div>
+                    <div class="tm-bundle-price">From ~$45 &nbsp;|&nbsp; Call for exact pricing</div>
+                    <a href="tel:843-548-7730" class="btn btn-primary"><i class="fas fa-phone"></i> Call to Order</a>
+                </div>
+
+                <div class="tm-bundle-card">
+                    <span class="tm-bundle-badge">Quick &amp; Easy</span>
+                    <h3>15-Minute Family Dinner Pack</h3>
+                    <p class="tm-bundle-desc">Dinner faster than delivery, better than takeout</p>
+                    <ul class="tm-bundle-items">
+                        <li><i class="fas fa-check-circle"></i> Scaramuzza Cheese Cavatelli</li>
+                        <li><i class="fas fa-check-circle"></i> Talluto's Tomato Sauce</li>
+                        <li><i class="fas fa-check-circle"></i> Hot or Mild Italian Sausage</li>
+                        <li><i class="fas fa-check-circle"></i> Long Semolina Rolls</li>
+                    </ul>
+                    <div class="tm-bundle-for"><strong>Best for:</strong> Busy weeknight, family of 4, exhausted parents</div>
+                    <div class="tm-bundle-price">From ~$28 &nbsp;|&nbsp; Call for exact pricing</div>
+                    <a href="tel:843-548-7730" class="btn btn-primary"><i class="fas fa-phone"></i> Call to Order</a>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 50px; padding: 40px; background: var(--light-bg); border-radius: 20px; box-shadow: var(--shadow-light);">
+                <h3 style="color: var(--text-dark); margin-bottom: 12px;">Want a Custom Bundle?</h3>
+                <p style="color: var(--text-light); max-width: 550px; margin: 0 auto 24px; font-size: 1rem;">Tell us your arrival date, family/team size, and how many nights you need meals for. We'll put together a custom order that fits your tournament week perfectly.</p>
+                <a href="tel:843-548-7730" class="btn btn-primary btn-large">
+                    <i class="fas fa-phone"></i> Call 843-548-7730 to Build Your Order
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Order - Tournament Focused -->
+    <section class="tm-how-to-order">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Order for Your Tournament Week</h2>
+                <p>We've made it as simple as possible — three steps and you're done</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Order Before You Leave Home</h3>
+                    <p>Call <strong>843-548-7730</strong> or email us with your arrival date, group size, and what meals you need. We'll confirm availability and set up your order in advance.</p>
+                    <p class="pickup-note">2–3 days notice recommended, 1 week for large orders</p>
+                </div>
+                <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Pick Up (or We Deliver)</h3>
+                    <p>We'll confirm a pickup location convenient to your stay in Myrtle Beach. Or choose local delivery to your condo, villa, or resort — we'll come to you.</p>
+                    <p class="pickup-note">Hudson's Market every Thursday &amp; flexible pickup times</p>
+                </div>
+                <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Heat, Eat &amp; Enjoy</h3>
+                    <p>Fresh pasta cooks in 3–5 minutes. Sauce heats in minutes. Sausage is quick in a pan. On the table in 10–15 minutes. Even after a full day at the ballpark.</p>
+                    <p class="pickup-note">Cash, Venmo, Zelle &amp; cards accepted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Order Inquiry Form -->
+    <section id="inquiry-form" class="tm-inquiry">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pre-Order for Your Tournament Week</h2>
+                <p>Submit this form and we'll follow up to confirm your order and pickup details</p>
+            </div>
+            <div class="inquiry-2col">
+                <div class="inquiry-sidebar">
+                    <h3>Order Before You Arrive</h3>
+                    <p>Planning ahead is the whole idea. Fill out the form and we'll reach out to confirm your order — usually within a few hours during business hours.</p>
+                    <p>For faster response, call or text us directly at <strong style="color: #F39C12;">843-548-7730</strong>. We're happy to help you plan the right meals for your family or team.</p>
+                    <ul class="inquiry-contact-list">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:843-548-7730">843-548-7730 — Call or Text</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:hello@jerseyjemsmb.com">hello@jerseyjemsmb.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-facebook"></i>
+                            <a href="https://www.facebook.com/share/14H35yfvq22/?mibextid=wwXIfr" target="_blank" rel="noopener">Message us on Facebook</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-store"></i>
+                            Walk-ins at Hudson's Market (Thursdays)
+                        </li>
+                    </ul>
+                </div>
+                <div class="inquiry-form-box">
+                    <h3>Tournament Pre-Order Request</h3>
+                    <form name="tournament-order" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+                        <input type="hidden" name="form-name" value="tournament-order">
+                        <p style="display:none;"><input name="bot-field"></p>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="t_fname">First Name *</label>
+                                <input type="text" id="t_fname" name="first-name" required placeholder="Your first name">
+                            </div>
+                            <div class="form-group">
+                                <label for="t_lname">Last Name *</label>
+                                <input type="text" id="t_lname" name="last-name" required placeholder="Your last name">
+                            </div>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="t_phone">Phone Number *</label>
+                                <input type="tel" id="t_phone" name="phone" required placeholder="(xxx) xxx-xxxx">
+                            </div>
+                            <div class="form-group">
+                                <label for="t_email">Email Address</label>
+                                <input type="email" id="t_email" name="email" placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="t_arrival">Arrival / Tournament Week *</label>
+                                <input type="text" id="t_arrival" name="arrival-date" required placeholder="e.g. June 14–18, 2025">
+                            </div>
+                            <div class="form-group">
+                                <label for="t_lodging">Where Are You Staying?</label>
+                                <input type="text" id="t_lodging" name="lodging-area" placeholder="e.g. Ocean Lakes, Kingston Resort...">
+                            </div>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="t_groupsize">Family / Group Size</label>
+                                <select id="t_groupsize" name="group-size">
+                                    <option value="">Select size...</option>
+                                    <option value="2-4">2–4 people (family)</option>
+                                    <option value="5-8">5–8 people (larger family)</option>
+                                    <option value="9-15">9–15 (small team)</option>
+                                    <option value="16+">16+ (full team / multiple families)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="t_delivery">Pickup or Delivery?</label>
+                                <select id="t_delivery" name="pickup-delivery">
+                                    <option value="">Select...</option>
+                                    <option value="pickup">I'll pick up</option>
+                                    <option value="delivery">Delivery to my condo/resort</option>
+                                    <option value="either">Either works</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="t_tournament">Tournament / Event Name (optional)</label>
+                            <input type="text" id="t_tournament" name="tournament-name" placeholder="e.g. Ripken Experience Summer Classic">
+                        </div>
+                        <div class="form-group">
+                            <label for="t_notes">What meals are you looking for? Any special requests?</label>
+                            <textarea id="t_notes" name="notes" rows="4" placeholder="e.g. Need pasta dinners for 3 nights, breakfasts for the whole week, and a dessert pack if we win the championship. Family of 5, staying at a condo with full kitchen..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-btn">
+                            <i class="fas fa-baseball-ball"></i> Send My Tournament Pre-Order
+                        </button>
+                        <p class="form-note">We'll follow up within a few hours. For urgent requests, call <a href="tel:843-548-7730" style="color: var(--primary-color);">843-548-7730</a> directly.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament FAQ -->
+    <section class="tm-faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tournament Family Questions</h2>
+                <p>Answers to the most common questions from visiting baseball families</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-baseball-ball"></i>
+                        <h3>Can I order before I arrive in Myrtle Beach?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes — and we strongly recommend it! Call or email us 2–7 days before your arrival. We'll confirm your order and have everything ready for pickup or delivery when you get here.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-users"></i>
+                        <h3>Do you serve team orders (10–20+ people)?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. Team dinners, carb-load nights, and large breakfast packs are all available. Call us ahead of time and we'll quote you a custom team price and make sure everything is stocked and ready.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-truck"></i>
+                        <h3>Do you deliver to condos and resorts?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Local delivery is available throughout Horry County, which covers most of the Myrtle Beach resort and condo areas. Call us to confirm your location and delivery fee.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-fire"></i>
+                        <h3>How long does it actually take to cook?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most meals are on the table in 10–15 minutes. Fresh pasta cooks in 3–5 minutes. Sauces heat in minutes. Sausage is quick in a skillet. We include cooking instructions with every order.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-home"></i>
+                        <h3>What if my condo doesn't have a big kitchen?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most Myrtle Beach condos and villas have at least a two-burner stove. All you need is a pot for pasta and a pan for sausage. Our meals are designed to work with minimal kitchen space.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-snowflake"></i>
+                        <h3>How long do the products last in the freezer?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All items are flash-frozen and will stay fresh in your condo freezer for 3–6 months. Perfect for stocking up on arrival and pulling out what you need each night. No rush to use everything at once.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>How much does a typical family order cost?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Bundles start from around $28–$34 for a family dinner pack. A full week's worth of meals for a family of 4–5 typically runs $80–$150 depending on what you choose. Always cheaper than restaurants for the whole week.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>How do I pay?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept cash, Venmo, Zelle, and all major credit cards at pickup. For delivery orders, payment can be arranged in advance. Team orders: we'll work out the best payment method for the group.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-cta">
+                <p>Still have questions about your tournament order?</p>
+                <a href="tel:843-548-7730" class="btn btn-secondary">
+                    <i class="fas fa-phone"></i> Call Us: 843-548-7730
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="tm-final-cta">
+        <div class="container">
+            <h2>Ready to Plan Your Tournament Meals?</h2>
+            <p>Call us before you leave home, tell us what you need, and we'll take care of the rest. Easy meals for your whole Myrtle Beach baseball trip.</p>
+            <div class="tm-cta-buttons">
+                <a href="tel:843-548-7730" class="btn btn-white btn-large">
+                    <i class="fas fa-phone"></i> Call 843-548-7730
+                </a>
+                <a href="#inquiry-form" class="btn btn-outline-white btn-large">
+                    <i class="fas fa-calendar-alt"></i> Submit a Pre-Order Request
+                </a>
+                <a href="menu/" class="btn btn-outline-white btn-large">
+                    <i class="fas fa-list-ul"></i> View Full Menu &amp; Prices
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/24a0133849be5cd3312001c2bccfadbe" alt="Jersey Jems Logo" class="logo">
+                        <h3>Jersey Jems</h3>
+                    </div>
+                    <p>Ready-to-go pasta dinners, breakfast packs &amp; team meal bundles for Myrtle Beach baseball families. Authentic Northeast Italian food — easy meals for your tournament week.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tournament-meals.html">Tournament Meals</a></li>
+                        <li><a href="local.html">Local Orders</a></li>
+                        <li><a href="nationwide.html">Ship Nationwide</a></li>
+                        <li><a href="menu/">Menu &amp; Prices</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> 843-548-7730</p>
+                    <p><i class="fas fa-envelope"></i> hello@jerseyjemsmb.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Myrtle Beach, SC</p>
+                    <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/share/14H35yfvq22/?mibextid=wwXIfr" target="_blank" style="color: inherit; text-decoration: none;">@jerseyjemsmb</a></p>
+                    <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/jerseyjemsmb" target="_blank" style="color: inherit; text-decoration: none;">@jerseyjemsmb</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jersey Jems. All rights reserved. | Tournament Meals for Myrtle Beach Baseball Families | Ripken Experience Myrtle Beach | Authentic NY, NJ &amp; Philly Italian Food</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

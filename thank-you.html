@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Request Received – Jersey Jems</title>
+    <meta name="description" content="Your tournament meal pre-order request has been received. Jersey Jems will contact you to confirm your order.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='30' fill='%23D2691E'>JJ</text></svg>">
+    
+    <!-- CSS Libraries -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .thank-you-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px 60px;
+            background: linear-gradient(135deg, #1a5276 0%, #154360 100%);
+        }
+        .thank-you-box {
+            background: #fff;
+            border-radius: 24px;
+            padding: 60px 50px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+        }
+        .thank-you-icon {
+            font-size: 5rem;
+            margin-bottom: 24px;
+            display: block;
+        }
+        .thank-you-box h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: #2C1810;
+            margin-bottom: 16px;
+        }
+        .thank-you-box p {
+            font-size: 1.05rem;
+            color: #8B4513;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+        .thank-you-box .contact-direct {
+            background: #FDF9F0;
+            border: 2px solid #F39C12;
+            border-radius: 14px;
+            padding: 24px;
+            margin: 28px 0;
+        }
+        .thank-you-box .contact-direct h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: #2C1810;
+            margin-bottom: 14px;
+        }
+        .contact-direct-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-direct-list li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1rem;
+            color: #2C1810;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .contact-direct-list li i {
+            color: #C0392B;
+            font-size: 1rem;
+        }
+        .contact-direct-list li a {
+            color: #C0392B;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-direct-list li a:hover { text-decoration: underline; }
+        .cta-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        @media (max-width: 480px) {
+            .thank-you-box { padding: 40px 24px; }
+            .cta-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="https://page.gensparksite.com/v1/base64_upload/24a0133849be5cd3312001c2bccfadbe" alt="Jersey Jems Logo" class="logo">
+                <h1>Jersey Jems</h1>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="tournament-meals.html" class="nav-link" style="background: linear-gradient(135deg,#C0392B,#F39C12); color:#fff; padding:6px 14px; border-radius:20px; font-weight:600;"><i class="fas fa-baseball-ball"></i> Tournament Meals</a></li>
+                <li><a href="local.html" class="nav-link"><i class="fas fa-map-marker-alt"></i> Local</a></li>
+                <li><a href="menu/" class="nav-link">Menu</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="thank-you-page">
+        <div class="thank-you-box">
+            <span class="thank-you-icon">⚾</span>
+            <h1>Order Request Received!</h1>
+            <p>Thanks for reaching out to Jersey Jems. We've got your pre-order request and will follow up within a few hours to confirm your order, availability, and pickup details.</p>
+            <p>If you need a faster response or have a time-sensitive request, please give us a call or text directly:</p>
+
+            <div class="contact-direct">
+                <h3>Reach Us Directly</h3>
+                <ul class="contact-direct-list">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:843-548-7730">843-548-7730 — Call or Text</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:hello@jerseyjemsmb.com">hello@jerseyjemsmb.com</a>
+                    </li>
+                    <li>
+                        <i class="fab fa-facebook"></i>
+                        <a href="https://www.facebook.com/share/14H35yfvq22/?mibextid=wwXIfr" target="_blank" rel="noopener">Message us on Facebook</a>
+                    </li>
+                </ul>
+            </div>
+
+            <p style="font-size: 0.95rem; color: #8B4513;">We love feeding baseball families — see you in Myrtle Beach! 🍝</p>
+
+            <div class="cta-buttons">
+                <a href="tournament-meals.html" class="btn btn-primary">
+                    <i class="fas fa-baseball-ball"></i> Tournament Meal Packs
+                </a>
+                <a href="menu/" class="btn btn-secondary">
+                    <i class="fas fa-list-ul"></i> View Full Menu
+                </a>
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

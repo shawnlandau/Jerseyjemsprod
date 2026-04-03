@@ -2,6 +2,7 @@
   publish = "."
   command = ""
 
+# Redirect /menu/Index.html case-insensitive variants
 [[redirects]]
   from = "/menu/Index.html"
   to = "/menu/index.html"
@@ -13,3 +14,42 @@
   to = "/Menu/index.html"
   status = 200
   force = true
+
+# Friendly URL slug for tournament page
+[[redirects]]
+  from = "/tournament-meals"
+  to = "/tournament-meals.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/baseball-families"
+  to = "/tournament-meals.html"
+  status = 301
+
+[[redirects]]
+  from = "/local"
+  to = "/local.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/nationwide"
+  to = "/nationwide.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 200
+  force = true
+
+# Headers for performance & security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
